@@ -15,7 +15,7 @@
 
   <div class="check">
     <p class="check-text">
-      最新情報をチェック
+      最新情報をチェック!!!
     </p>
     <a href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @dokkyobc</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
@@ -23,8 +23,6 @@
 
 
   <p>
-    <br>
-    <br>
     <br>
     <br>
     <br>
