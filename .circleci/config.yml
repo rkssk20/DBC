@@ -2,39 +2,18 @@ version: 2.1
 orbs:
   aws-ecr: circleci/aws-ecr@1.0.0
   aws-ecs: circleci/aws-ecs@0.0.6
-
-executors:
-  docker_build:
-    machine:
-      docker_layer_caching: true
-
 workflows:
-  build_and_deploy:
+  build-and-deploy:
     jobs:
-      - build
       - aws-ecr/build_and_push_image:
-          executor: docker_build
-          name: 'build-staging'
-          account-url: ${AWS_ECR_ACCOUNT_URL}
-          region: ${AWS_REGION}
+          account-url: '${AWS_ECR_ACCOUNT_URL}'
           repo: 'dbc'
-          tag: "${CIRCLE_SHA1}"
-          path: ./
-          dockerfile: Dockerfile-staging
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - master
+          region: '${AWS_REGION}'
+          tag: '${CIRCLE_SHA1}
+  '
       - aws-ecs/deploy-service-update:
           requires:
-            - build-staging
+            - aws-ecr/build_and_push_image
           family: 'dbc-task'
-          service-name: 'task'
-          cluster-name: 'task-cluster'
-          container-image-name-updates: 'container=dbc-container,image-and-tag=${AWS_ECR_ACCOUNT_URL}/${AWS_REGION}:${CIRCLE_SHA1}'
-          filters:
-            branches:
-              only:
-                - staging
+          cluster-name: 'dbc-cluster'
+          container-image-name-updates: 'container=dbc-container,image-and-tag=${AWS_ECR_ACCOUNT_URL}/dbc:${CIRCLE_SHA1}'
