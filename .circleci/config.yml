@@ -15,6 +15,6 @@ workflows:
           requires:
             - aws-ecr/build_and_push_image
           family: 'dbc-task'
+          service-name: 'dbc'
           cluster-name: 'dbc-cluster'
-          service: 'dbc'
           container-image-name-updates: 'container=dbc-container,image-and-tag=${AWS_ECR_ACCOUNT_URL}/dbc:${CIRCLE_SHA1}'
