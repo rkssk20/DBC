@@ -1,0 +1,834 @@
+@charset "utf-8";
+
+body{
+  font-family: HGP創英角ﾎﾟｯﾌﾟ体,sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: #eeeeee;
+  --main-color: hsla(220, 13%, 18%,1);
+}
+
+
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+
+/* header */
+header{
+  width: 100vw;
+  height: 15vw;
+  top: 0;
+  background-color: var(--main-color);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.title-img{
+  width: 35vw;
+}
+
+#show{
+  font-size: 5vw;
+  position: absolute;
+  right: 15.28vw;
+  color: #eeeeee;
+  cursor: pointer;
+}
+
+/* menu */
+.menu{
+  position: fixed;
+  top: 0;
+  right: -35vw;
+  min-height: 100%;
+  width: 35vw;
+  background-color: hsla(60, 50%, 50%,1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  transition: .4s;
+  z-index: 2;
+}
+
+.menu-open > .menu{
+  right: 0;
+}
+
+#hide{
+  position: absolute;
+  font-size: 5vw;
+  top: 5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eeeeee;
+  cursor: pointer;
+}
+
+.menu-list{
+  position: absolute;
+  top: 15vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.menu-text{
+  font-size: 2.5vw;
+  color: #eeeeee;
+}
+
+.menu-text > a{
+  color: black;
+  text-decoration: none;
+}
+
+.menu-sns{
+  width: 21vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-icon{
+  width: 5vw;
+  height: 5vw;
+}
+
+.cover{
+  background: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+
+/* youtube */
+.movie{
+  width: 100vw;
+  height: calc(100vw * 0.5625);
+  margin: 15vw auto auto auto;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 更新情報 */
+.contentbox{
+  margin-top: 20vw;
+}
+
+#title-new{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.swiper-button-prev:after,.swiper-button-next:after{
+  font-size: 7vw !important;
+}
+
+.swiper1 {
+  width: 100vw;
+  height: 50vw;
+}
+
+.wrapper1{
+  width: 100vw;
+}
+
+.post{
+  width: 27.33vw !important;
+  margin: 0 11.335vw;
+}
+
+.swiper-link{
+  color: black;
+}
+
+.post-title{
+  font-size: 2.2vw;
+  margin-bottom: 5vw;
+}
+
+.post-content{
+  font-size: 2vw;
+  height: 20vw;
+  margin: 5vw auto;
+}
+
+.post-time{
+  font-size: 2vw;
+  height: 2vw;
+  margin: 0;
+}
+
+
+
+/* 獨協大学放送研究会について */
+#title-intro{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.swiper-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.poster{
+  width: 30vw;
+  height: 35.63vw;
+  margin: auto 0 auto 3vw;
+}
+
+.swiper-title{
+  font-size: 2vw;
+  margin-bottom: 5vw;
+}
+
+.swiper-green{
+  color: hsla(83, 62%, 45%,1);
+  font-size: 3vw;
+}
+
+.swiper-row{
+  width: 90vw;
+  margin: auto;
+}
+
+.swiper-row > p{
+  font-size: 2.1vw;
+}
+
+.swiper-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-column > p{
+  font-size: 2.1vw;
+  margin: 0;
+}
+
+.swiper-production{
+  width: 60vw;
+  margin: 0 auto 3vw;
+}
+
+
+
+/* コラボ・協力制作 */
+#title-collabo{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.collabo-title{
+  font-size: 3.1vw;
+}
+
+.collabo-time{
+  color: hsla(83, 62%, 45%,1);
+  font-style: italic;
+}
+
+.collabo-text{
+  font-size: 2.1vw;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.collabo-text > p{
+  margin-right: 10vw;
+}
+
+.collabo-icon{
+  width: 8vw;
+  margin: auto;
+  vertical-align: bottom;
+}
+
+
+
+/* リンク */
+#title-link{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.link-title{
+  font-size: 2vw;
+  margin-top: 5vw;
+  margin-bottom: 3vw;
+}
+
+.blog-icon{
+  width: 5vw;
+  height: 5vw;
+  vertical-align: bottom;
+}
+
+
+
+/* ギャラリー */
+#title-gallery{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.gallery-main{
+  width: 60vw;
+}
+
+.gallery-sub{
+  width: 15vw;
+  cursor: pointer;
+}
+
+
+
+/* お問い合わせ */
+#title-mail{
+  font-size: 2.1vw;
+  border-width:3px;
+  margin-top: -15vw;
+  margin-bottom: 5vw;
+  padding-top: 15vw;
+}
+
+.mail-title{
+  font-size: 1.7vw;
+}
+
+.mail{
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mail-head{
+  font-size: 2vw;
+}
+
+.mail-name,.mail-text{
+  font-size: 2vw;
+  width: 50vw;
+  margin-bottom: 3vw;
+}
+
+
+
+/* 管理者ログイン */
+#title-login{
+  margin: 10vw auto 5vw auto;
+}
+
+
+
+/* footer */
+footer{
+  width: 100vw;
+  height: 13vw;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.title-bw{
+  width: 25vw;
+  /* 彩度で白黒 */
+  filter: saturate(0%);
+}
+
+.copyright{
+  font-size: 1vw;
+  margin:5px 0 0 0;
+  color: white;
+}
+
+
+
+/* newpost page */
+.newpost{
+  width: 80vw;
+  margin: auto;
+  align-items: center;
+}
+
+.newpost-head{
+  margin-top: 5vw;
+}
+
+.newpost-title{
+  font-size: 2.2vw;
+  margin-bottom: 5vw;
+}
+
+.newpost-content{
+  font-size: 2vw;
+  margin: 5vw auto;
+}
+
+.newpost-time{
+  font-size: 2vw;
+  margin-bottom: 5vw;
+}
+
+
+
+/* form page */
+.form-top{
+  margin: 15vw auto 0;
+}
+
+.form-input{
+  width: 60vw;
+}
+
+.form-textarea{
+  width: 60vw;
+  height: 20vw;
+}
+
+.form-keep{
+  margin-top: 3vw;
+}
+
+.form-check{
+  padding: 0;
+  margin: 8vw 0;
+}
+
+.form-list{
+  list-style: none;
+}
+
+.form-delete{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* mail page */
+.mailpage{
+  margin-top: 15vw;
+}
+
+.mailpage-text{
+  word-wrap: break-word;
+  width: 60vw;
+  margin: 3vw auto;
+}
+
+
+
+/* member page */
+.login{
+  margin-top: 15vw;
+}
+
+.login-content{
+  margin-top: 1vw;
+}
+
+.login-button{
+  width: 120px;
+  margin: 3vw auto 0;
+} 
+
+
+
+/* upload page */
+.upload-form{
+  height: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15vw;
+}
+
+
+
+/* pc view */
+@media screen and (min-width: 768px){
+  /* header */
+  header{
+    height: 115.19px;
+  }
+
+  .title-img{
+    width: 268.8px;
+  }
+
+  #show{
+    font-size: 38px;
+    right: 117.35px;
+  }
+  
+  /* menu */
+  .menu{
+    right: -268.797px;
+    width: 268.797px;
+  }
+  
+  #hide{
+    font-size: 38px;
+    top: 38.4px;
+  }
+
+  .menu-list{
+    top: 115.19px;
+    height: 460.797px;
+  }
+  
+  .menu-text{
+    font-size: 19.2px;
+  }
+
+  .menu-sns{
+    width: 161.27px;
+  }
+
+  .menu-icon{
+    width: 38.39px;
+    height: 38.39px;
+  }
+
+  .main{
+    margin-top: 115.19px;
+  }
+
+
+  /* youtube */
+  .movie{
+    width: 767px;
+    height: 431.438px;
+    margin-top: 230.38px ;
+  }
+
+  /* 更新情報 */
+  .contentbox{
+    margin-top: 153.6px;
+  }
+
+  #title-new{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .swiper-button-prev:after,.swiper-button-next:after{
+    font-size: 53px !important;
+  }
+
+  .swiper1 {
+    height: 268.797px;
+    width: 768px;
+  }
+
+  .post{
+    width: 209.891px !important;
+    margin: 0 23.04px;
+  }
+
+  .post-title{
+    font-size: 16.896px;
+    margin-bottom: 38.4px;
+  }
+
+  .post-content{
+    font-size: 15.36px;
+    height: 69.109px;
+    margin: 38.4px auto;
+  }
+
+  .post-time{
+    font-size: 15.36px;
+    height: 15.36px;
+  }
+
+
+
+  /* 獨協大学放送研究会について */
+  #title-intro{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .swiper2{
+    width: 768px;
+  }
+
+  .poster{
+    width: 230.391px;
+    height: 273.625px;
+    margin: auto 0 auto 23.04px;
+  }
+
+  .swiper-title{
+    font-size: 15.36px;
+    margin-bottom: 38.4px;
+  }
+
+  .swiper-green{
+    color: hsla(83, 62%, 45%,1);
+    font-size: 23.04px;
+  }
+
+  .swiper-row{
+    width: 691.188px;
+    margin: auto;
+  }
+
+  .swiper-row > p{
+    font-size: 16.128px;
+  }
+
+  .swiper-column > p{
+    font-size: 16.128px;
+  }
+
+  .swiper-production{
+    width: 460.797px;
+    margin: 0 auto 23.04px;
+  }
+
+
+
+  /* コラボ・協力制作 */
+  #title-collabo{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .collabo-title{
+    font-size: 23.808px;
+  }
+
+  .collabo-text{
+    font-size: 16.128px;
+  }
+
+  .collabo-text > p{
+    margin-right: 76.8px;
+  }
+
+  .collabo-icon{
+    width: 61.438px;
+  }
+
+
+
+  /* リンク */
+  #title-link{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .link-title{
+    font-size: 15.36px;
+    margin-top: 38.4px;
+    margin-bottom: 23.04px;
+  }
+
+  .blog-icon{
+    width: 38.391px;
+    height: 38.391px;
+  }
+
+
+
+  /* ギャラリー */
+  #title-gallery{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .swiper3{
+    width: 768px;
+  }
+
+  .gallery-main{
+    width: 460.797px;
+  }
+
+  .gallery-sub{
+    width: 115.188px;
+  }
+
+  .slide-sub{
+    width: 768px;
+  }
+
+
+
+  /* お問い合わせ */
+  #title-mail{
+    font-size: 16.128px;
+    margin-top: -115.2px;
+    margin-bottom: 38.4px;
+    padding-top: 115.2px;
+  }
+
+  .mail-title{
+    font-size: 13.056px;
+  }
+
+  .mail{
+    margin-top: 23.04px;
+  }
+
+  .mail-head{
+    font-size: 15.36px;
+  }
+
+  .mail-name,.mail-text{
+    font-size: 15.36px;
+    width: 384px;
+    margin-bottom: 23.04px;
+  }
+
+
+
+  /* 管理者ログイン */
+  #title-login{
+    margin: 76.8px auto 38.4px auto;
+  }
+
+
+
+  /* footer */
+  footer{
+    height: 99.828px;
+  }
+
+  .title-bw{
+    width: 192px;
+  }
+
+  .copyright{
+    font-size: 10px;
+    margin:5px 0 0 0;
+  }
+
+
+
+  /* form page */
+  .form-top{
+    margin: 15vw auto 0;
+  }
+
+  .form-input{
+    width: 60vw;
+  }
+
+  .form-textarea{
+    width: 60vw;
+    height: 20vw;
+  }
+
+
+
+  /* mail page */
+  .mailpage{
+    margin-top: 15vw;
+  }
+
+  .mailpage-text{
+    word-wrap: break-word;
+    width: 60vw;
+    margin: 3vw auto;
+  }
+
+
+
+  /* member page */
+  .login{
+    margin-top: 15vw;
+  }
+
+  .login-content{
+    margin-top: 1vw;
+  }
+
+  .login-button{
+    width: 120px;
+    margin: 3vw auto 0;
+  } 
+
+
+
+  /* upload page */
+  .upload-form{
+    height: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15vw;
+  }
+}

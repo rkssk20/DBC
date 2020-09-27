@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
     $db = null;
 
     if ($result[0] != 0){
-      include('php/form.php');
+      include('form.php');
     exit;
 
     }else{
