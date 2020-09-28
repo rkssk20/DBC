@@ -206,15 +206,15 @@ include('php/header.php');
   </p>
   
   <form class="mail" action="php/mail.php" method="post">
-    <p class="mail-head">名前:</p>
-    <input class="mail-name" type="text" name="name">
-    <p class="mail-head">メールアドレス:</p>
-    <input class="mail-name" type="email" name="mail">
+    <p class="mail-head">名前：</p>
+    <input class="mail-name" name="name" type="text" required="required" id="name">
+    <p class="mail-head">メールアドレス：</p>
+    <input class="mail-name" name="email" type="email" required="required" id="email">
     <p class="mail-head">お問い合わせ内容:</p>
-    <textarea class="mail-text" type="text" name="comment" rows="5"></textarea>
+    <textarea class="mail-text" name="content" required="required" id="email"></textarea>
+    <input type="hidden" id="token" name="token" value="1234567" />
     
-    <input type="hidden" name="token" value="<?=sha1(session_id())?>">
-    <input type="submit" value="送信">
+    <input name="submit_button" type="submit" id="submit_buttom" value="送信">
   </form>
 </div>
 
