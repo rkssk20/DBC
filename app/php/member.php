@@ -11,8 +11,8 @@ include('header.php');
 
 
 
-<form id="form" class="login" action="" method="POST">
-  <h3>管理者ログイン</h3>
+<form class="login" id="form" action="" method="POST">
+  <h1 class="login-title">管理者ログイン</h1>
 
   <font color="#ff0000">
     <?php
@@ -22,11 +22,11 @@ include('header.php');
     ?>
   </font>
   <div class="login-content">
-    <label for="signup-id">ユーザー名</label>
+    <label class="login-head" for="signup-id">ユーザー名</label>
     <div><input type="text" name="username" id="signup-id"></div>
   </div>
   <div class="login-content">
-    <label for="signup-pass">パスワード</label>
+    <label class="login-head" for="signup-pass">パスワード</label>
     <div><input type="password" name="password" id="signup-pass"></div>
   </div>
   <div><input class="login-button" type="submit" name="login" value="ログイン"></div>

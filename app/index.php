@@ -24,7 +24,7 @@ include('php/header.php');
     <li class="menu-text"><a id="link6" href="#title-mail">お問い合わせ</a></li>
     <div class="menu-sns">
       <a target="_blank"  href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
-      <a target="_blank"  href=""><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
+      <a target="_blank"  href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
       <a target="_blank"  href="https://dokkyobc.blog.fc2.com"><img class="menu-icon" src="public/44433.png" alt="Twitter icon"></a>
     </div>
   </ul>
@@ -50,7 +50,7 @@ include('php/header.php');
       <!-- blogテーブルから描画 -->
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
-          <a href="" class="swiper-link"><h1 class="post-title"><?php echo $post['title'] ?></h1></a>
+          <a href="php/newpost.php" class="swiper-link"><h1 class="post-title"><?php echo $post['title'] ?></h1></a>
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
           <p class="post-time"><?php echo substr($post['time'],0,10) ?></p>
         </div>
@@ -213,7 +213,7 @@ include('php/header.php');
     <p class="mail-head">お問い合わせ内容:</p>
     <textarea class="mail-text" name="content" required="required" id="email"></textarea>
     <input type="hidden" id="token" name="token" value="1234567" />
-    
+
     <input name="submit_button" type="submit" id="submit_buttom" value="送信">
   </form>
 </div>

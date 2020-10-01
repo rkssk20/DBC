@@ -7,7 +7,7 @@ include('header.php');
 
 </header>
 
-<div class="mailpage"></div>
+
 
 <p class="newpost-head">更新情報</p>
 <?php require 'blog.php'; foreach ($posts as $post) { ?>

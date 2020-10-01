@@ -387,6 +387,7 @@ footer{
 
 .title-bw{
   width: 25vw;
+  vertical-align: bottom;
   /* 彩度で白黒 */
   filter: saturate(0%);
 }
@@ -407,7 +408,8 @@ footer{
 }
 
 .newpost-head{
-  margin-top: 5vw;
+  margin-top: 16vw;
+  font-size: 2.5vw;
 }
 
 .newpost-title{
@@ -429,20 +431,38 @@ footer{
 
 /* form page */
 .form-top{
-  margin: 15vw auto 0;
+  margin-top: 15vw;
+}
+
+.form-title{
+  font-size: 3vw;
+}
+
+.form-head{
+  font-size: 2vw;
 }
 
 .form-input{
   width: 60vw;
+  font-size: 2vw;
 }
 
 .form-textarea{
   width: 60vw;
   height: 20vw;
+  font-size: 2vw;
+}
+
+.form-post{
+  font-size: 2vw;
+}
+
+.form-delete{
+  margin: auto;
 }
 
 .form-keep{
-  margin-top: 3vw;
+  margin-top: 5vw;
 }
 
 .form-check{
@@ -481,13 +501,22 @@ footer{
   margin-top: 15vw;
 }
 
+.login-title{
+  font-size: 3vw;
+}
+
 .login-content{
   margin-top: 1vw;
 }
 
+.login-head{
+  font-size: 2vw;
+}
+
 .login-button{
-  width: 120px;
-  margin: 3vw auto 0;
+  width: 17vw;
+  margin-top: 5vw;
+  font-size: 1.5vw;
 } 
 
 
@@ -499,6 +528,13 @@ footer{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-top: 15vw;
+}
+
+
+
+/* done page */
+.done-top{
   margin-top: 15vw;
 }
 
@@ -777,25 +813,74 @@ footer{
 
 
 
+  /* newpost page */
+  .newpost{
+    width: 614.391px;
+  }
+
+  .newpost-head{
+    margin-top: 122.88px;
+    font-size: 19.2px;
+  }
+
+  .newpost-title{
+    font-size: 16.896px;
+    margin-bottom: 38.4px;
+  }
+
+  .newpost-content{
+    font-size: 15.36px;
+    margin: 38.4px auto;
+  }
+
+  .newpost-time{
+    font-size: 15.36px;
+    margin-bottom: 38.4px;
+  }
+
+
+
   /* form page */
   .form-top{
-    margin: 15vw auto 0;
+    margin-top: 115.19px;
+  }
+
+  .form-title{
+    font-size: 23.04px;
+  }
+
+  .form-head{
+    font-size: 15.36px;
   }
 
   .form-input{
-    width: 60vw;
+    width: 468.8px;
+    font-size: 15.36px;
   }
 
   .form-textarea{
-    width: 60vw;
-    height: 20vw;
+    width: 466.8px;
+    height: 159.59px;
+    font-size: 15.36px;
+  }
+
+  .form-post{
+    font-size: 15.36px;
+  }
+
+  .form-keep{
+    margin-top: 38.4px;
+  }
+
+  .form-check{
+    margin: 61.44px 0;
   }
 
 
 
   /* mail page */
   .mailpage{
-    margin-top: 15vw;
+    margin-top: 115.19px;
   }
 
   .mailpage-text{
@@ -808,23 +893,32 @@ footer{
 
   /* member page */
   .login{
-    margin-top: 15vw;
+    margin-top: 115.19px;
+  }
+
+  .login-title{
+    font-size: 23.04px;
   }
 
   .login-content{
-    margin-top: 1vw;
+    margin-top: 7.68px;
+  }
+
+  .login-head{
+    font-size: 15.36px;
   }
 
   .login-button{
-    width: 120px;
-    margin: 3vw auto 0;
-  } 
+    width: 124px;
+    margin-top: 38.4px;
+    font-size: 11.52px;
+  }  
 
 
 
   /* upload page */
   .upload-form{
-    height: 15vw;
+    height: 115.19px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

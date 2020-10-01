@@ -7,7 +7,7 @@ $request_datetime = date("Y/m/d H:i:s");
 
 $mailto = $request_param['email'];
 $to = "dbc2020.hp@gmail.com";
-$mailfrom = "dbc2020.hp@gmail.com";
+$mailfrom = "From: dbc2020.hp@gmail.com";
 $subject = "お問い合わせ、ありがとうございます。";
 
 $content = "";
@@ -35,20 +35,19 @@ mb_language("ja");
 mb_internal_encoding("UTF-8");
 //mail 送信
 if($request_param['token'] === '1234567'){
-if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
-   mb_send_mail($mailto,$subject,$content,$mailfrom);
+	if(mb_send_mail($to, $subject2, $content2, $mailfrom)){
+		 mb_send_mail($mailto,$subject,$content,$mailfrom);
    ?>
    <script>
-       window.location = "送信した後に表示されるページのURL";
+       window.location = "done.php";
    </script>
    <?php
-} else {
+	} else {
    header('Content-Type: text/html; charset=UTF-8');
- echo "メールの送信に失敗しました";
-};
+ 		echo "メールの送信に失敗しました";
+	};
 } else {
-echo "メールの送信に失敗しました（トークンエラー）";
+	echo "メールの送信に失敗しました（トークンエラー）";
 }
-
 
 ?>

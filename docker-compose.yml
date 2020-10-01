@@ -40,13 +40,8 @@ services:
   mailhog:
     image: mailhog/mailhog
     ports:
-        - "8025:8025"
-        - "1025:1025"
-    environment:
-        MH_STORAGE: maildir
-        MH_MAILDIR_PATH: /tmp
-    volumes:
-        - "./mailhog:/tmp"
+      - "8025:8025"
+      - "1025:1025"
 
 volumes:
     db_data: {}
