@@ -9,7 +9,7 @@ services:
     restart: always
     ports:
       - 3306:3306
-    hostname: dbserver
+    hostname: root
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: dbc
