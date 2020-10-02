@@ -3,18 +3,11 @@ version: '3.7'
 services:
   mysql:
     image: mysql:5.7
-    container_name: mysql
     volumes:
       - db_data:/var/lib/mysql
     restart: always
-    ports:
-      - 3306:3306
-    hostname: dbc
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_USER: dbc
-      MYSQL_PASSWORD: password
-      MYSQL_DATABASE: login
+      MYSQL_ROOT_PASSWORD: 'password'
 
   phpmyadmin:
     depends_on:
