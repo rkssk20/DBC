@@ -7,13 +7,13 @@ workflows:
     jobs:
       - aws-ecr/build_and_push_image:
           account-url: '${AWS_ECR_ACCOUNT_URL}'
-          repo: 'dbc'
+          repo: 'dbc-service'
           region: '${AWS_REGION}'
           tag: '${CIRCLE_SHA1}
   '
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build_and_push_image
-          family: 'dbc-task'
+          family: 'dbc-service'
           cluster-name: 'dbc-cluster'
           container-image-name-updates: 'container=dbc-container,tag=${CIRCLE_SHA1}'
