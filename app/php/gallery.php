@@ -2,7 +2,7 @@
 
 function connectDB() {
     try {
-        $pdo = new PDO('mysql:host=mysql_dbc; dbname=blog', 'root', 'password');
+        $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc', 'root', 'password');
         return $pdo;
 
     } catch (PDOException $e) {

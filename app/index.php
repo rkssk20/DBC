@@ -18,7 +18,7 @@ include('php/header.php');
   <ul class="menu-list">
     <li class="menu-text"><a id="link" href="#title-new">更新情報</a></li>
     <li class="menu-text"><a id="link2" href="#title-intro">DBCについて</a></li>
-    <li class="menu-text"><a id="link3" href="#title-collabo">コラボ・協力制作</a></li>
+    <li class="menu-text"><a id="link3" href="#title-collabo">活動報告</a></li>
     <li class="menu-text"><a id="link4" href="#title-link">リンク</a></li>
     <li class="menu-text"><a id="link5" href="#title-gallery">ギャラリー</a></li>
     <li class="menu-text"><a id="link6" href="#title-mail">お問い合わせ</a></li>
@@ -123,9 +123,9 @@ include('php/header.php');
 
 
 
-<!-- コラボ・協力制作 -->
+<!-- 活動報告 -->
 <div class="contentbox">
-  <p id="title-collabo">コラボ・協力制作</p>
+  <p id="title-collabo">活動報告</p>
   <h1 class="collabo-title">LUNCH POEMS@DOKKYO / <span class="collabo-time">2016.11.25 〜</span></h1>
   <div class="collabo-text">
     <p>獨協大学外国語学部英語学科主催の、<br>ポエトリーリーディングイベントです。<br>撮影・編集をさせていただきました。</p>

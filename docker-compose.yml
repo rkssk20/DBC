@@ -3,6 +3,7 @@ version: '3.7'
 services:
   mysql:
     image: mysql:5.7
+    container_name: mysql_dbc
     volumes:
       - db_data:/var/lib/mysql
     restart: always
@@ -12,7 +13,6 @@ services:
   phpmyadmin:
     depends_on:
       - mysql
-    container_name: dbc_phpmyadmin
     image: phpmyadmin/phpmyadmin
     environment:
       PMA_HOST: mysql
