@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
   $password = $_POST['password'];
 
   try {
-    $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
+    $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','mysql_dbc','password');
     $sql = 'select count(*) from users where username=? and password=?';
     $stmt = $db->prepare($sql);
     $stmt->execute(array($username,$password));
