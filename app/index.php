@@ -6,6 +6,7 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 
 require('php/gallery.php');
 
+
 include('php/header.php');
 
 ?>
