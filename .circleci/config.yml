@@ -8,12 +8,12 @@ workflows:
       - aws-ecr/build_and_push_image:
           account-url: 'AWS_ECR_ACCOUNT_URL'
           repo: 'dbc'
-          region: 'AWS_RESOURCE_NAME_PREFIX'
+          region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build_and_push_image
-          aws-region: 'AWS_RESOURCE_NAME_PREFIX'
+          aws-region: 'AWS_REGION'
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
           container-image-name-updates: 'container=app,tag=${CIRCLE_SHA1}'
