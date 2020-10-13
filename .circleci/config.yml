@@ -16,4 +16,5 @@ workflows:
           # aws-region: 'AWS_REGION'
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
+          service-name: 'dbc'
           container-image-name-updates: 'container=app-container,tag=${CIRCLE_SHA1}'
