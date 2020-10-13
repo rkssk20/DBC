@@ -2,7 +2,7 @@
 
 function connectDB() {
   try {
-      $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc', 'mysql_dbc', 'password');
+      $pdo = new PDO('mysql:host=testdb.cppaencyzjj6.ap-northeast-1.rds.amazonaws.com; dbname=dbc', 'mysql_dbc', 'password');
       return $pdo;
 
   } catch (PDOException $e) {

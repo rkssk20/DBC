@@ -8,7 +8,7 @@
     if (!$content) $error .= '本文を記入してください。<br>';
     if (mb_strlen($content) > 300) $error .= 'タイトルは300文字以内で記入してください。<br>';
     if (!$error) {
-      $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc','mysql_dbc','password');
+      $pdo = new PDO('mysql:host=testdb.cppaencyzjj6.ap-northeast-1.rds.amazonaws.com; dbname=dbc','mysql_dbc','password');
       $st = $pdo->query("INSERT INTO post(title,content) VALUES('$title','$content')");
       header('Location: post.php');
       exit();
