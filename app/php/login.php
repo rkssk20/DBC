@@ -8,9 +8,9 @@ if (isset($_POST['login'])) {
 
   try {
     if($_SERVER['SERVER_NAME']=='localhost'){
-      $db = new PDO('mysql:host=testdb.cppaencyzjj6.ap-northeast-1.rds.amazonaws.com; dbname=dbc','mysql_dbc','password');
+      $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
     }else{
-      $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','mysql_dbc','password');
+      $db = new PDO('mysql:host=testdb.cppaencyzjj6.ap-northeast-1.rds.amazonaws.com; dbname=dbc','mysql_dbc','password');
     }
 
     $sql = 'select count(*) from users where username=? and password=?';
