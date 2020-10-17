@@ -36,10 +36,11 @@ header{
 
 .title-img{
   width: 35vw;
+  vertical-align: bottom;
 }
 
 #show{
-  font-size: 5vw;
+  font-size: 6vw;
   position: absolute;
   right: 15.28vw;
   color: #eeeeee;
@@ -69,7 +70,7 @@ header{
 
 #hide{
   position: absolute;
-  font-size: 5vw;
+  font-size: 6vw;
   top: 5vw;
   left: 50%;
   transform: translateX(-50%);
@@ -90,7 +91,7 @@ header{
 }
 
 .menu-text{
-  font-size: 2.5vw;
+  font-size: 4vw;
   color: #eeeeee;
 }
 
@@ -100,15 +101,15 @@ header{
 }
 
 .menu-sns{
-  width: 21vw;
+  width: 25vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .menu-icon{
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
 }
 
 .cover{
@@ -146,7 +147,7 @@ iframe{
 }
 
 #title-new{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -159,7 +160,7 @@ iframe{
 
 .swiper1 {
   width: 100vw;
-  height: 50vw;
+  height: 58vw;
 }
 
 .wrapper1{
@@ -167,8 +168,8 @@ iframe{
 }
 
 .post{
-  width: 27.33vw !important;
-  margin: 0 11.335vw;
+  width: 39.33vw !important;
+  margin: 0 5.335vw;
 }
 
 .swiper-link{
@@ -176,18 +177,18 @@ iframe{
 }
 
 .post-title{
-  font-size: 2.2vw;
+  font-size: 3.5vw;
   margin-bottom: 5vw;
 }
 
 .post-content{
-  font-size: 2vw;
+  font-size: 3.5vw;
   height: 20vw;
   margin: 5vw auto;
 }
 
 .post-time{
-  font-size: 2vw;
+  font-size: 3.5vw;
   height: 2vw;
   margin: 0;
 }
@@ -196,7 +197,7 @@ iframe{
 
 /* 獨協大学放送研究会について */
 #title-intro{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -216,13 +217,13 @@ iframe{
 }
 
 .swiper-title{
-  font-size: 2vw;
+  font-size: 4vw;
   margin-bottom: 5vw;
 }
 
 .swiper-green{
   color: hsla(83, 62%, 45%,1);
-  font-size: 3vw;
+  font-size: 4.5vw;
 }
 
 .swiper-row{
@@ -231,7 +232,7 @@ iframe{
 }
 
 .swiper-row > p{
-  font-size: 2.1vw;
+  font-size: 3vw;
 }
 
 .swiper-column{
@@ -240,12 +241,12 @@ iframe{
 }
 
 .swiper-column > p{
-  font-size: 2.1vw;
+  font-size: 3vw;
   margin: 0;
 }
 
 .swiper-production{
-  width: 60vw;
+  width: 75vw;
   margin: 0 auto 3vw;
 }
 
@@ -253,7 +254,7 @@ iframe{
 
 /* 活動報告  */
 #title-collabo{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -261,7 +262,7 @@ iframe{
 }
 
 .collabo-title{
-  font-size: 3.1vw;
+  font-size: 4vw;
 }
 
 .collabo-time{
@@ -270,7 +271,7 @@ iframe{
 }
 
 .collabo-text{
-  font-size: 2.1vw;
+  font-size: 3.5vw;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -283,7 +284,7 @@ iframe{
 }
 
 .collabo-icon{
-  width: 8vw;
+  width: 10vw;
   margin: auto;
   vertical-align: bottom;
 }
@@ -292,7 +293,7 @@ iframe{
 
 /* リンク */
 #title-link{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -300,14 +301,14 @@ iframe{
 }
 
 .link-title{
-  font-size: 2vw;
+  font-size: 3.5vw;
   margin-top: 5vw;
   margin-bottom: 3vw;
 }
 
 .blog-icon{
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
   vertical-align: bottom;
 }
 
@@ -315,7 +316,7 @@ iframe{
 
 /* ギャラリー */
 #title-gallery{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -323,11 +324,11 @@ iframe{
 }
 
 .gallery-main{
-  width: 60vw;
+  width: 75vw;
 }
 
 .gallery-sub{
-  width: 15vw;
+  width: 20vw;
   cursor: pointer;
 }
 
@@ -335,7 +336,7 @@ iframe{
 
 /* お問い合わせ */
 #title-mail{
-  font-size: 2.1vw;
+  font-size: 4vw;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -343,7 +344,7 @@ iframe{
 }
 
 .mail-title{
-  font-size: 1.7vw;
+  font-size: 3vw;
 }
 
 .mail{
@@ -354,11 +355,11 @@ iframe{
 }
 
 .mail-head{
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .mail-name,.mail-text{
-  font-size: 2vw;
+  font-size: 3vw;
   width: 50vw;
   margin-bottom: 3vw;
 }
@@ -541,7 +542,7 @@ footer{
 
 
 /* pc view */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 560px){
   /* header */
   header{
     height: 115.19px;
