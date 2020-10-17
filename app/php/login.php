@@ -8,8 +8,10 @@ if (isset($_POST['login'])) {
 
   try {
     if($_SERVER['SERVER_NAME']=='localhost'){
+      // ローカル開発環境
       $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
     }else{
+      // AWS本番環境
       $db = new PDO('mysql:host=testdb.cppaencyzjj6.ap-northeast-1.rds.amazonaws.com; dbname=dbc','mysql_dbc','password');
     }
 
