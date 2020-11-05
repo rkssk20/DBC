@@ -81,7 +81,7 @@ header{
 .menu-list{
   position: absolute;
   top: 15vw;
-  height: 60vh;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,7 +91,7 @@ header{
 }
 
 .menu-text{
-  font-size: 4vw;
+  font-size: 13px;
   color: #eeeeee;
 }
 
@@ -147,7 +147,7 @@ iframe{
 }
 
 #title-new{
-  font-size: 4vw;
+  font-size: 17px;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -160,7 +160,6 @@ iframe{
 
 .swiper1 {
   width: 100vw;
-  height: 58vw;
 }
 
 .wrapper1{
@@ -168,8 +167,23 @@ iframe{
 }
 
 .post{
-  width: 39.33vw !important;
-  margin: 0 5.335vw;
+  width: 68vw !important;
+  height: 55vw !important;
+  margin: 0 15vw;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1vw;
+}
+
+.post-new{
+  color: hsla(60, 50%, 50%,1);
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+}
+
+.post:not(:first-child)>.post-new{
+  visibility:hidden;
 }
 
 .swiper-link{
@@ -177,18 +191,18 @@ iframe{
 }
 
 .post-title{
-  font-size: 3.5vw;
-  margin-bottom: 5vw;
+  font-size: 15px;
+  margin-top: 0;
 }
 
 .post-content{
-  font-size: 3.5vw;
-  height: 20vw;
+  font-size: 15px;
   margin: 5vw auto;
 }
 
 .post-time{
-  font-size: 3.5vw;
+  color: #999999;
+  font-size: 15px;
   height: 2vw;
   margin: 0;
 }
@@ -197,17 +211,24 @@ iframe{
 
 /* 獨協大学放送研究会について */
 #title-intro{
-  font-size: 4vw;
+  font-size: 17px;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
   padding-top: 15vw;
 }
 
+.swiper-box{
+  width: 80vw !important;
+  margin: 0 10vw;
+  background-color: white;
+  border-radius: 5px;
+}
+
 .swiper-row{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .poster{
@@ -217,22 +238,46 @@ iframe{
 }
 
 .swiper-title{
-  font-size: 4vw;
-  margin-bottom: 5vw;
+  font-size: 17px;
+  margin-bottom: 15px;
 }
 
 .swiper-green{
   color: hsla(83, 62%, 45%,1);
-  font-size: 4.5vw;
+  font-size: 17px;
 }
 
 .swiper-row{
-  width: 90vw;
+  width: 80vw;
   margin: auto;
 }
 
-.swiper-row > p{
-  font-size: 3vw;
+.swiper-row > div{
+  position: relative;
+}
+
+.swiper-hidden{
+  font-size: 15px;
+  height: 80px;
+  overflow-y: hidden;
+}
+
+.swiper-show{
+  font-size: 15px;
+}
+
+.swiper-more{
+  position: absolute;
+  bottom:0;
+	width:100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0) linear-gradient(180deg, rgba(255, 255, 255, 0.5), white) repeat scroll 0 0;
+  font-weight:bold;
+	cursor:pointer;
+}
+
+.swiper-none{
+  display: none;
 }
 
 .swiper-column{
@@ -241,7 +286,7 @@ iframe{
 }
 
 .swiper-column > p{
-  font-size: 3vw;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -254,7 +299,7 @@ iframe{
 
 /* 活動報告  */
 #title-collabo{
-  font-size: 4vw;
+  font-size: 17px;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -262,7 +307,7 @@ iframe{
 }
 
 .collabo-title{
-  font-size: 4vw;
+  font-size: 13px;
 }
 
 .collabo-time{
@@ -271,7 +316,7 @@ iframe{
 }
 
 .collabo-text{
-  font-size: 3.5vw;
+  font-size: 13px;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -280,7 +325,7 @@ iframe{
 }
 
 .collabo-text > p{
-  margin-right: 10vw;
+  margin-right: 5vw;
 }
 
 .collabo-icon{
@@ -291,32 +336,9 @@ iframe{
 
 
 
-/* リンク */
-#title-link{
-  font-size: 4vw;
-  border-width:3px;
-  margin-top: -15vw;
-  margin-bottom: 5vw;
-  padding-top: 15vw;
-}
-
-.link-title{
-  font-size: 3.5vw;
-  margin-top: 5vw;
-  margin-bottom: 3vw;
-}
-
-.blog-icon{
-  width: 7vw;
-  height: 7vw;
-  vertical-align: bottom;
-}
-
-
-
 /* ギャラリー */
 #title-gallery{
-  font-size: 4vw;
+  font-size: 17px;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
@@ -334,34 +356,34 @@ iframe{
 
 
 
-/* お問い合わせ */
-#title-mail{
-  font-size: 4vw;
+/* リンク */
+#title-link{
+  font-size: 17px;
   border-width:3px;
   margin-top: -15vw;
   margin-bottom: 5vw;
   padding-top: 15vw;
 }
 
-.mail-title{
-  font-size: 3vw;
-}
-
-.mail{
-  margin-top: 3vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mail-head{
-  font-size: 3vw;
-}
-
-.mail-name,.mail-text{
-  font-size: 3vw;
-  width: 50vw;
+.link-title{
+  font-size: 15px;
+  margin-top: 5vw;
   margin-bottom: 3vw;
+}
+
+.blog-icon{
+  width: 7vw;
+  height: 7vw;
+  vertical-align: bottom;
+}
+
+.link-text{
+  font-size: 15px;
+}
+
+.link-text + iframe{
+  width: 60vw !important;
+  height: 80vw !important;
 }
 
 
@@ -484,19 +506,6 @@ footer{
 
 
 
-/* mail page */
-.mailpage{
-  margin-top: 15vw;
-}
-
-.mailpage-text{
-  word-wrap: break-word;
-  width: 60vw;
-  margin: 3vw auto;
-}
-
-
-
 /* member page */
 .login{
   margin-top: 15vw;
@@ -542,7 +551,7 @@ footer{
 
 
 /* pc view */
-@media screen and (min-width: 560px){
+@media screen and (min-width: 600px){
   /* header */
   header{
     height: 115.19px;
@@ -615,7 +624,6 @@ footer{
   }
 
   .swiper1 {
-    height: 268.797px;
     width: 768px;
   }
 
@@ -624,9 +632,13 @@ footer{
     margin: 0 23.04px;
   }
 
+  .post:first-child>.post-new:first-child{
+    color: hsla(60, 50%, 50%,1);
+    font-size: 15.36px;
+  }
+
   .post-title{
     font-size: 16.896px;
-    margin-bottom: 38.4px;
   }
 
   .post-content{
@@ -652,6 +664,11 @@ footer{
 
   .swiper2{
     width: 768px;
+  }
+
+  .swiper-row{
+    display: flex;
+    flex-direction: row;
   }
 
   .poster{
@@ -759,34 +776,6 @@ footer{
 
   .slide-sub{
     width: 768px;
-  }
-
-
-
-  /* お問い合わせ */
-  #title-mail{
-    font-size: 16.128px;
-    margin-top: -115.2px;
-    margin-bottom: 38.4px;
-    padding-top: 115.2px;
-  }
-
-  .mail-title{
-    font-size: 13.056px;
-  }
-
-  .mail{
-    margin-top: 23.04px;
-  }
-
-  .mail-head{
-    font-size: 15.36px;
-  }
-
-  .mail-name,.mail-text{
-    font-size: 15.36px;
-    width: 384px;
-    margin-bottom: 23.04px;
   }
 
 

@@ -10,15 +10,18 @@
   var link4 = document.getElementById('link4');
   var link5 = document.getElementById('link5');
   var cover = document.getElementById('cover');
+  var swiper = document.getElementById('swiper-text');
+  var more = document.getElementById('more');
+  var next = document.getElementById('next');
 
-  // show
+  // hedder show
   show.addEventListener('click',function(){
     header.className = 'menu-open';
     cover.className = 'cover';
     no_scroll();
   });
 
-  // hide
+  // hedder hide
   hide.addEventListener('click',function(){
     header.className = '';
     cover.className = '';
@@ -49,10 +52,6 @@
     hide.click();
   });
 
-  link6.addEventListener('click',() => {
-    hide.click();
-  });
-
   // スクロール禁止
   function no_scroll() {
     document.addEventListener("mousewheel", scroll_control, { passive: false });
@@ -67,4 +66,15 @@
   function scroll_control(event) {
     event.preventDefault();
   }
-})();
+
+  // swiper 続きを読む
+  more.addEventListener('click',function(){
+    swiper.className = 'swiper-show';
+    more.className = 'swiper-none'
+  });
+
+  next.addEventListener('click',function(){
+    swiper.className = 'swiper-hidden';
+    more.className = 'swiper-more';
+  })
+})(); 

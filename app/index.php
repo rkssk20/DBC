@@ -21,7 +21,6 @@ include('php/header.php');
     <li class="menu-text"><a id="link3" href="#title-collabo">活動報告</a></li>
     <li class="menu-text"><a id="link4" href="#title-link">リンク</a></li>
     <li class="menu-text"><a id="link5" href="#title-gallery">ギャラリー</a></li>
-    <li class="menu-text"><a id="link6" href="#title-mail">お問い合わせ</a></li>
     <div class="menu-sns">
       <a target="_blank"  href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
       <a target="_blank"  href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
@@ -50,6 +49,7 @@ include('php/header.php');
       <!-- blogテーブルから描画 -->
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
+          <p class="post-new">New</p>
           <a href="php/newpost.php" class="swiper-link"><h1 class="post-title"><?php echo $post['title'] ?></h1></a>
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
           <p class="post-time"><?php echo substr($post['time'],0,10) ?></p>
@@ -69,23 +69,26 @@ include('php/header.php');
   <p id="title-intro">獨協大学放送研究会について</p>
   <div class="swiper-container swiper2">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-box">
         <h1 class="swiper-title"><span class="swiper-green">D</span>okkyo <span class="swiper-green">B</span>roadcasting <span class="swiper-green">C</span>lub</h1>
         <div class="swiper-row">
-          <p>獨協大学放送研究会(DBC)は、<br>
-          「アナウンス」「声優」「企画・制作」の３分野から<br>
-          技術向上のために活動しています。<br>
-          <br>
-          年に３回行われる番組発表会では、<br>
-          音響・照明・装飾まで<br>
-          全て自分たちで作り上げます。<br>
-          <br>
-          各種コンテスト・コンクールへの参加、<br>
-          他団体の撮影・編集・司会も行います。</p>
+          <div>
+            <p id="swiper-text" class="swiper-text swiper-hidden">獨協大学放送研究会(DBC)は、<br>
+            「アナウンス」「声優」「企画・制作」の３分野から<br>
+            技術向上のために活動しています。<br>
+            <br>
+            年に３回行われる番組発表会では、<br>
+            音響・照明・装飾まで<br>
+            全て自分たちで作り上げます。<br>
+            <br>
+            各種コンテスト・コンクールへの参加、<br>
+            他団体の撮影・編集・司会も行います。</p>
+            <div id="more" class="swiper-more">続きを読む</div>
+          </div>
           <img class="poster" src="public/poster.png" alt="DBC poste">
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-box">
         <h1 class="swiper-title">アナウンスプロダクション</h1>
         <div class="swiper-column">
           <img class="swiper-production" src="public/announce.png" alt="アナプロ イメージ">
@@ -95,7 +98,7 @@ include('php/header.php');
           </p>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-box">
         <h1 class="swiper-title">声優プロダクション</h1>
         <div class="swiper-column">
           <img class="swiper-production" src="public/voice.png" alt="声優 イメージ">
@@ -105,7 +108,7 @@ include('php/header.php');
           </p>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-box">
         <h1 class="swiper-title">企画・制作プロダクション</h1>
         <div class="swiper-column">
           <img class="swiper-production" src="public/kisei.png" alt="企制 イメージ">
@@ -117,7 +120,7 @@ include('php/header.php');
       </div>
     </div>
     <div class="swiper-button-prev prev2"></div>
-    <div class="swiper-button-next next2"></div>
+    <div id="next" class="swiper-button-next next2"></div>
   </div>
 </div>
 
@@ -128,7 +131,7 @@ include('php/header.php');
   <p id="title-collabo">活動報告</p>
   <h1 class="collabo-title">LUNCH POEMS@DOKKYO / <span class="collabo-time">2016.11.25 〜</span></h1>
   <div class="collabo-text">
-    <p>獨協大学外国語学部英語学科主催の、<br>ポエトリーリーディングイベントです。<br>撮影・編集をさせていただきました。</p>
+    <p>獨協大学外国語学部英語学科主催の<br>ポエトリーリーディングイベントです。<br>撮影・編集をさせていただきました。</p>
     <a target="_blank" href="https://www.youtube.com/channel/UCfYlD2rwf1VY2nLhdJNe8rg/featured"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
   </div>
   <h1 class="collabo-title">わいわいロードフェスティバル / <span class="collabo-time">2017.12.23</span></h1>
@@ -138,27 +141,8 @@ include('php/header.php');
   </div>
   <h1 class="collabo-title">次世代ワクワクミュージックパーティー / <span class="collabo-time">2018.8.21</span></h1>
   <div class="collabo-text">
-    <p>ワンダフルドーナッツさん<br>（@dokkyo_movie）からのお誘いを受けて、<br>渋谷のタワーレコードで撮影をしてきました。</p>
+    <p>タワーレコード渋谷店で行われた、<br>ワンダフルドーナッツさんの<br>ライブを撮影させれていただきました。</p>
     <a target="_blank" href="https://www.youtube.com/watch?v=95yH085KsLM"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
-  </div>
-</div>
-
-
-
-<!-- リンク -->
-<div class="contentbox">
-  <p id="title-link">リンク</p>
-  <div>
-    <h1 class="link-title">Twitter</h1>
-    <a  target="_blank" href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @dokkyobc</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </div>
-  <div>
-    <h1 class="link-title">YouTube</h1>
-    <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
-  </div>
-  <div>
-    <h1 class="link-title">Blog</h1>
-    <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="blog-icon" src="public/44433.png" alt="blog icon"></a>
   </div>
 </div>
 
@@ -196,26 +180,24 @@ include('php/header.php');
 
 
 
-<!-- お問い合わせ -->
+<!-- リンク -->
 <div class="contentbox">
-  <p id="title-mail">お問い合わせ</p>
-  <p class="mail-title">
-    部活へのご質問や、撮影・司会協力のご依頼等は<br>
-    下記のメールフォーム<br>
-    またはTwitterのダイレクトメールからお願いします。
-  </p>
-  
-  <form class="mail" action="php/mail.php" method="post">
-    <p class="mail-head">名前：</p>
-    <input class="mail-name" name="name" type="text" required="required" id="name">
-    <p class="mail-head">メールアドレス：</p>
-    <input class="mail-name" name="email" type="email" required="required" id="email">
-    <p class="mail-head">お問い合わせ内容:</p>
-    <textarea class="mail-text" name="content" required="required" id="email"></textarea>
-    <input type="hidden" id="token" name="token" value="1234567" />
-
-    <input name="submit_button" type="submit" id="submit_buttom" value="送信">
-  </form>
+  <p id="title-link">リンク</p>
+  <div>
+    <h1 class="link-title">YouTube</h1>
+    <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
+  </div>
+  <div>
+    <h1 class="link-title">Blog</h1>
+    <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="blog-icon" src="public/44433.png" alt="blog icon"></a>
+  </div>
+  <div>
+    <h1 class="link-title">お問い合わせ</h1>
+    <p class="link-text">部活へのご質問や、撮影・司会協力等のご依頼は<br>
+    メール（dbc2020.hp@gmail.com）<br>
+    またはTwitterのダイレクトメールからお願いします。</p>
+    <a class="twitter-timeline" data-chrome=”noheader,nofooter” data-theme="light" href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw">Tweets by dokkyobc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 </div>
 
 

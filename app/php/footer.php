@@ -11,7 +11,7 @@
       function swiperSwitch(){
         if(window.matchMedia('(max-width: 767px)').matches){
           var mySwiper = new Swiper('.swiper1', {
-            slidesPerView: 2,
+            slidesPerView: 1,
             navigation: {
               nextEl: '.next1',
               prevEl: '.prev1'
