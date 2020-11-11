@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       function swiperSwitch(){
-        if(window.matchMedia('(max-width: 767px)').matches){
+        if(window.matchMedia('(max-width: 599px)').matches){
           var mySwiper = new Swiper('.swiper1', {
             slidesPerView: 1,
             navigation: {
@@ -22,7 +22,7 @@
               clickable: true
             }
           });
-        }else if(window.matchMedia('(min-width: 768px)').matches){
+        }else if(window.matchMedia('(min-width: 600px)').matches){
           var mySwiper = new Swiper('.swiper1', {
             slidesPerView: 3,
             navigation: {

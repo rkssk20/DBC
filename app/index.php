@@ -16,11 +16,11 @@ include('php/header.php');
 <!-- hamburger close -->
   <i class="fa fa-times" id="hide"></i>
   <ul class="menu-list">
-    <li class="menu-text"><a id="link" href="#title-new">更新情報</a></li>
-    <li class="menu-text"><a id="link2" href="#title-intro">DBCについて</a></li>
-    <li class="menu-text"><a id="link3" href="#title-collabo">活動報告</a></li>
-    <li class="menu-text"><a id="link4" href="#title-link">リンク</a></li>
-    <li class="menu-text"><a id="link5" href="#title-gallery">ギャラリー</a></li>
+    <li><a class="menu-text" id="link" href="#title-new">更新情報</a></li>
+    <li><a class="menu-text" id="link2" href="#title-intro">DBCについて</a></li>
+    <li><a class="menu-text" id="link3" href="#title-collabo">活動報告</a></li>
+    <li><a class="menu-text" id="link5" href="#title-gallery">ギャラリー</a></li>
+    <li><a class="menu-text" id="link4" href="#title-link">リンク</a></li>
     <div class="menu-sns">
       <a target="_blank"  href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
       <a target="_blank"  href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
@@ -35,8 +35,10 @@ include('php/header.php');
 
 
 <!-- youtube -->
-<div class="movie">
-  <iframe src="https://www.youtube.com/embed/DQBlIPz9EMc?autoplay=1&mute=1&rel=0&loop=1&playlist=DQBlIPz9EMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="movie-top">
+  <div class="movie">
+    <iframe src="https://www.youtube.com/embed/DQBlIPz9EMc?autoplay=1&mute=1&rel=0&loop=1&playlist=DQBlIPz9EMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
 </div>
 
 
@@ -45,7 +47,7 @@ include('php/header.php');
 <div class="contentbox">
   <p id="title-new">更新情報</p>
   <div class="swiper-container swiper1">
-    <div class="swiper-wrapper wrapper1">
+    <div class="swiper-wrapper">
       <!-- blogテーブルから描画 -->
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
@@ -129,17 +131,20 @@ include('php/header.php');
 <!-- 活動報告 -->
 <div class="contentbox">
   <p id="title-collabo">活動報告</p>
-  <h1 class="collabo-title">LUNCH POEMS@DOKKYO / <span class="collabo-time">2016.11.25 〜</span></h1>
+  <h1 class="collabo-title">LUNCH POEMS@DOKKYO</h1>
+  <h1 class="collabo-time">2016.11.25 〜</h1>
   <div class="collabo-text">
     <p>獨協大学外国語学部英語学科主催の<br>ポエトリーリーディングイベントです。<br>撮影・編集をさせていただきました。</p>
     <a target="_blank" href="https://www.youtube.com/channel/UCfYlD2rwf1VY2nLhdJNe8rg/featured"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
   </div>
-  <h1 class="collabo-title">わいわいロードフェスティバル / <span class="collabo-time">2017.12.23</span></h1>
+  <h1 class="collabo-title">わいわいロードフェスティバル</h1>
+  <h1 class="collabo-time">2017.12.23</h1>
   <div class="collabo-text">
     <p>わいわいウィンターウィンドフェスティバル<br>＠草加市わいわいロード商店街<br>撮影・編集をさせていただきました。</p>
     <a target="_blank" href="https://www.youtube.com/channel/UCmEIEzl-hCIhtPXu71NGnrw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
   </div>
-  <h1 class="collabo-title">次世代ワクワクミュージックパーティー / <span class="collabo-time">2018.8.21</span></h1>
+  <h1 class="collabo-title">次世代ワクワクミュージックパーティー</h1>
+  <h1 class="collabo-time">2018.8.21</h1>
   <div class="collabo-text">
     <p>タワーレコード渋谷店で行われた、<br>ワンダフルドーナッツさんの<br>ライブを撮影させれていただきました。</p>
     <a target="_blank" href="https://www.youtube.com/watch?v=95yH085KsLM"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
@@ -183,13 +188,21 @@ include('php/header.php');
 <!-- リンク -->
 <div class="contentbox">
   <p id="title-link">リンク</p>
-  <div>
+  <div class="link-box">
     <h1 class="link-title">YouTube</h1>
-    <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
+    <div class="link-content">
+      <p class="link-text">雄飛祭や部活紹介をまとめた<br>
+      再生リストです。</p>
+      <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
+    </div>
   </div>
-  <div>
+  <div class="link-box">
     <h1 class="link-title">Blog</h1>
-    <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="blog-icon" src="public/44433.png" alt="blog icon"></a>
+    <div class="link-content">
+      <p class="link-text">発表会の進捗状況などを<br>
+      更新していきます。</p>
+      <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="blog-icon" src="public/44433.png" alt="blog icon"></a>
+    </div>
   </div>
   <div>
     <h1 class="link-title">お問い合わせ</h1>
@@ -199,8 +212,6 @@ include('php/header.php');
     <a class="twitter-timeline" data-chrome=”noheader,nofooter” data-theme="light" href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw">Tweets by dokkyobc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 </div>
-
-
 
 <a href="php/member.php" id="title-login"><button>管理者ログイン</button></a>
 

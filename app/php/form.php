@@ -15,11 +15,15 @@ include('header.php');
 <!-- 記事投稿 -->
 <form class="form-top" method="post" action="post.php">
   <h3 class="form-title">記事投稿</h3>
-  <p class="form-head">タイトル</p>
-  <p><input class="form-input" type="text" name="title" placeholder="15文字以内" value="<?php echo $title ?>"></p>
-  <p class="form-head">本文</p>
-  <p><textarea class="form-textarea" name="content" placeholder="300文字以内"><?php echo $content ?></textarea></p>
-  <p><input class="form-post" name="submit" type="submit" value="投稿"></p>
+  <div class="form-content">
+    <label class="form-head" for="">タイトル</label>
+    <div><input class="form-input" type="text" name="title" placeholder="15文字以内" value="<?php echo $title ?>"></div>
+  </div>
+  <div class="form-content">
+    <label class="form-head" for="">本文</label>
+    <div><textarea class="form-textarea" name="content" placeholder="300文字以内"><?php echo $content ?></textarea>
+  </div>
+ <input class="form-post" name="submit" type="submit" value="投稿"></div>
   <font color="#ff0000"><?php echo $error ?></font>
 </form>
 
@@ -34,9 +38,9 @@ include('header.php');
 <form class="form-top" method="post" enctype="multipart/form-data">
   <h3 class="form-title">画像投稿</h3>
   <div>
-    <input class="form-post" type="file" name="image" required>
+    <input class="form-file" type="file" name="image" required>
   </div>
-  <button class="form-post form-keep" type="submit">保存</button>
+  <button class="form-post" type="submit">保存</button>
 </form>
 
 <ul class="form-check">
