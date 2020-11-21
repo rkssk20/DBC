@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
       $db = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
     }else{
       // AWS本番環境
-      $db = new PDO('mysql:host=$_ENV["DATABASE_HOST"]; dbname=$_ENV["DATABASE_NAME"]','$_ENV["DATABASE_USER"]','$_ENV["DATABASE_PASSWORD"]');
+      $db = new PDO('mysql:host=getenv("DATABASE_HOST"); dbname=getenv("DATABASE_NAME")','getenv("DATABASE_USER")','getenv("DATABASE_PASSWORD")');
     }
 
     $sql = 'select count(*) from users where username=? and password=?';
