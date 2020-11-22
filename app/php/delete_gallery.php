@@ -7,7 +7,7 @@ function connectDB() {
         $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
       }else{
         // AWS本番環境
-        $pdo = new PDO("mysql:host=getenv('DATABASE_HOST'); dbname=getenv('DATABSE_NAME')","getenv('DATABSE_USER')","getenv('DATABASE_PASSWORD')");
+        $pdo = new PDO('mysql:host=getenv("DATABASE_HOST"); dbname=getenv("DATABASE_NAME")','getenv("DATABASE_USER")','getenv("DATABASE_PASSWORD")');
       }
         return $pdo;
 
