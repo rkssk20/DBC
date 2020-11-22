@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
       $NAME = getenv('DATABASE_NAME');
       $USER = getenv('DATABASE_USER');
       $PASSWORD = getenv('DATABASE_PASSWORD');
-      $db = new PDO('mysql:host=$HOST; dbname=$NAME','$USER','$PASSWORD');
+      $db = new PDO("mysql:host=$HOST; dbname=$NAME","$USER","$PASSWORD");
     }
 
     $sql = 'select count(*) from users where username=? and password=?';
