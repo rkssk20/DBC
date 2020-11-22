@@ -13,7 +13,7 @@
         $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
       }else{
         // AWS本番環境
-        $pdo = new PDO('mysql:host=.$_ENV["DATABASE_HOST"].; dbname=.$_ENV["DATABSE_NAME"].','.$_ENV["DATABSE_USER"].','.$_ENV["DATABASE_PASSWORD"].');
+        $pdo = new PDO('mysql:host=$_ENV["DATABASE_HOST"]; dbname=$_ENV["DATABSE_NAME"]','$_ENV["DATABSE_USER"]','$_ENV["DATABASE_PASSWORD"]');
       }
       $st = $pdo->query("INSERT INTO post(title,content) VALUES('$title','$content')");
       header('Location: post.php');
