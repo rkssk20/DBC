@@ -52,7 +52,14 @@ include('php/header.php');
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
           <p class="post-new">New</p>
-          <a href="php/newpost.php" class="swiper-link"><h1 class="post-title"><?php echo $post['title'] ?></h1></a>
+          <!-- URLなしでサイト内、ありで別サイト -->
+          <?php if($post['url'] == null): ?>
+          <a href="php/newpost.php" class="swiper-link">
+          <?php else: ?>
+          <a href="<?php echo $post['url'] ?>" class="swiper-link">
+          <?php endif; ?>
+          <h1 class="post-title"><?php echo $post['title'] ?></h1>
+          </a>
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
           <p class="post-time"><?php echo substr($post['time'],0,10) ?></p>
         </div>
