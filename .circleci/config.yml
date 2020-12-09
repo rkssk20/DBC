@@ -15,5 +15,5 @@ workflows:
             - aws-ecr/build_and_push_image
           family: 'dbc-task'
           cluster-name: 'dbc-clu'
-          service-name: 'dbc'
+          service-name: 'dbc-ser'
           container-image-name-updates: 'container=appp,tag=${CIRCLE_SHA1}'

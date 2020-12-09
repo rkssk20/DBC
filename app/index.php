@@ -22,9 +22,9 @@ include('php/header.php');
     <li><a class="menu-text" id="link5" href="#title-gallery">ギャラリー</a></li>
     <li><a class="menu-text" id="link4" href="#title-link">リンク</a></li>
     <div class="menu-sns">
-      <a target="_blank"  href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
-      <a target="_blank"  href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
-      <a target="_blank"  href="https://dokkyobc.blog.fc2.com"><img class="menu-icon" src="public/44433.png" alt="Twitter icon"></a>
+      <a target="_blank" href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
+      <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
+      <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="menu-icon" src="public/44433.png" alt="Twitter icon"></a>
     </div>
   </ul>
 </div>
@@ -43,6 +43,22 @@ include('php/header.php');
 
 
 
+<!-- テスト -->
+<?php
+
+$get_api_url = "https://www.googleapis.com/youtube/v3/videos?id=wZSxXYqm4ik&key=AIzaSyCHVBNcg6gBN0EDm8mC2B-2ZsR0utw4DY8&part=snippet,contentDetails,statistics,status";
+$json = file_get_contents($get_api_url);
+$getData = json_decode( $json , true);
+foreach((array)$getData['items'] as $key => $gDat){
+	$video_title = $gDat['snippet']['title'];
+}
+
+echo $video_title
+
+
+?>
+
+
 <!-- 更新情報 -->
 <div>
   <p id="title-new">更新情報</p>
@@ -56,7 +72,7 @@ include('php/header.php');
           <?php if($post['url'] == null): ?>
           <a href="php/newpost.php" class="swiper-link">
           <?php else: ?>
-          <a href="<?php echo $post['url'] ?>" class="swiper-link">
+          <a href="<?php echo $post['url'] ?>" target="_blank" class="swiper-link">
           <?php endif; ?>
           <h1 class="post-title"><?php echo $post['title'] ?></h1>
           </a>
