@@ -43,22 +43,6 @@ include('php/header.php');
 
 
 
-<!-- テスト -->
-<?php
-
-$get_api_url = "https://www.googleapis.com/youtube/v3/videos?id=wZSxXYqm4ik&key=AIzaSyCHVBNcg6gBN0EDm8mC2B-2ZsR0utw4DY8&part=snippet,contentDetails,statistics,status";
-$json = file_get_contents($get_api_url);
-$getData = json_decode( $json , true);
-foreach((array)$getData['items'] as $key => $gDat){
-	$video_title = $gDat['snippet']['title'];
-}
-
-echo $video_title
-
-
-?>
-
-
 <!-- 更新情報 -->
 <div>
   <p id="title-new">更新情報</p>

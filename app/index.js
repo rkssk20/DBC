@@ -14,12 +14,16 @@
   var more = document.getElementById('more');
   var next = document.getElementById('next');
 
+
+
   // hedder show
   show.addEventListener('click',function(){
     header.className = 'menu-open';
     cover.className = 'cover';
     no_scroll();
   });
+
+
 
   // hedder hide
   hide.addEventListener('click',function(){
@@ -52,6 +56,8 @@
     hide.click();
   });
 
+
+
   // スクロール禁止
   function no_scroll() {
     document.addEventListener("mousewheel", scroll_control, { passive: false });
@@ -66,6 +72,8 @@
   function scroll_control(event) {
     event.preventDefault();
   }
+
+
 
   // swiper 続きを読む
   more.addEventListener('click',function(){
