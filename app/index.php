@@ -52,7 +52,8 @@ include('php/header.php');
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
           <p class="post-new">New</p>
-          <!-- URLなしでサイト内、ありで別サイト -->
+
+          <!-- URLなし=サイト内、あり=リンク -->
           <?php if($post['url'] == null): ?>
           <a href="php/newpost.php" class="swiper-link">
           <?php else: ?>
@@ -60,7 +61,18 @@ include('php/header.php');
           <?php endif; ?>
           <h1 class="post-title"><?php echo $post['title'] ?></h1>
           </a>
+
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
+
+          <!-- URLのYouTube,Blog判定 -->
+          <?php if(strstr($post['url'],'youtube.com')): ?>
+          <p class="post-youtube">YouTube</p>
+          <?php elseif(strstr($post['url'],'dokkyobc.blog.fc2.com')): ?>
+          <p class="post-blog">Blog</p>
+          <?php else: ?>
+          <p class="post-news">News</p>
+          <?php endif; ?>
+
           <p class="post-time"><?php echo substr($post['time'],0,10) ?></p>
         </div>
       <?php } ?>

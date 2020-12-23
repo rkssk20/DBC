@@ -204,12 +204,31 @@ iframe{
 
 .post-content{
   font-size: 1.5rem;
-  margin: 20px auto;
+  height: 130px !important;
+  margin: 0 !important;
+  word-wrap: break-word;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.post-youtube{
+  font-size: 1.3rem;
+  color: hsla(327, 100%, 45%,1);
+}
+
+.post-blog{
+  font-size: 1.3rem;
+  color: var(--dbc-blue);
+}
+
+.post-news{
+  font-size: 1.3rem;
+  color: var(--dbc-yellow);
 }
 
 .post-time{
   color: #999999;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0;
 }
 
