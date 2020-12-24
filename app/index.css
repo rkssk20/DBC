@@ -204,7 +204,7 @@ iframe{
 
 .post-content{
   font-size: 1.5rem;
-  height: 130px !important;
+  height: 70px !important;
   margin: 0 !important;
   word-wrap: break-word;
   overflow: hidden;
@@ -676,13 +676,12 @@ footer{
 
   .post{
     width: 200px !important;
-    height: 280px !important;
+    height: 300px !important;
     margin: 0 18px;
   }
 
   .post-content{
-    height: 69.109px;
-    margin: 38.4px auto;
+    height: 120px !important;
   }
 
   .post-time{
