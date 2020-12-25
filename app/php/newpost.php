@@ -1,7 +1,7 @@
 <?php
 
 $path = "../";
-include('header.php'); 
+include 'header.php'; 
 
 ?>
 
@@ -26,6 +26,6 @@ include('header.php');
 <?php
 
 $path = "../";
-include('footer.php');
+include 'footer.php';
 
 ?>
