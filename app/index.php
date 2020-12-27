@@ -55,7 +55,7 @@ include 'php/header.php';
 
           <!-- URLなし=サイト内、あり=リンク -->
           <?php if($post['url'] == null): ?>
-          <a href="php/newpost.php" class="swiper-link">
+          <a href="php/post_page.php" class="swiper-link">
           <?php else: ?>
           <a href="<?php echo $post['url'] ?>" target="_blank" class="swiper-link">
           <?php endif; ?>
@@ -241,7 +241,7 @@ include 'php/header.php';
   </div>
 </div>
 
-<a href="php/member.php" id="title-login"><button>管理者ログイン</button></a>
+<a href="php/login_page.php" id="title-login"><button>管理者ログイン</button></a>
 
 
 

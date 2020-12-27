@@ -4,33 +4,30 @@ require 'db.php';
 
 $errorMessage = "";
 // issetで変数が存在するか
-if (isset($_POST['login'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+if (isset($_POST['submit'])) {
+  $user = $_POST['user'];
+  $pass = $_POST['pass'];
 
   try {
     // select countでレコード数を取得
-    $sql = 'select count(*) from users where username=? and password=?';
-    // prepareでsqlに入力をセット
-    $stmt = $pdo->prepare($sql);
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE user = :user');
     // execuseで実行
-    $stmt->execute(array($username,$password));
+    $stmt->execute(array(':user' => $_POST['user']));
     // fetchで結果を配列で取得
-    $result = $stmt->fetch();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $stmt = null;
     $pdo = null;
 
-    // レコード数が0でなければok
-    if ($result[0] != 0){
+    $errorMessage = $result;
+
+    if(password_verify($_POST['pass'], $result['password'])){
       include('form.php');
-    exit;
-
     }else{
-      $errorMessage = "入力に間違いがあります";
-    }
+      $errorMessage = "ログイン認証に失敗しました";
+    } 
 
-  }catch (PDOExeption $e) {
-    echo $e->getMessage();
+  }catch (Exeption $e) {
+    $errorMessage = "データベースの接続に失敗しました：";
     exit;
   }
 }
