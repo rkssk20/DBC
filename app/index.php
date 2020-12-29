@@ -23,8 +23,8 @@ include 'php/header.php';
     <li><a class="menu-text" id="link4" href="#title-link">リンク</a></li>
     <div class="menu-sns">
       <a target="_blank" href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
-      <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="Twitter icon"></a>
-      <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="menu-icon" src="public/44433.png" alt="Twitter icon"></a>
+      <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="YouTube icon"></a>
+      <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="menu-icon" src="public/44433.png" alt="Blog icon"></a>
     </div>
   </ul>
 </div>

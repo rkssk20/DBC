@@ -466,30 +466,59 @@ footer{
 
 
 
-/* newpost page */
-.newpost{
+/* post page */
+.postpage-top{
   width: 80%;
-  margin: auto;
+  margin: 135px auto 0;
   align-items: center;
 }
 
-.newpost-head{
-  margin-top: 65px;
-  font-size: 1.7rem;
+.postpage{
+  margin: auto;
+  align-items: center;
+  border-top: solid;
+  border-width: 1px;
+  border-color: #aaaaaa;
 }
 
-.newpost-title{
+.postpage:first-child{
+  border-top: hidden;
+}
+
+.postpage-new{
+  color:var(--dbc-green);
+  font-size: 1.7rem;
+  margin: 0;
+  text-align: left;
+}
+
+.postpage:not(:first-child)>.postpage-new{
+  visibility: hidden;
+}
+
+.postpage-title{
   font-size: 1.7rem;
   margin-bottom: 40px;
 }
 
-.newpost-content{
+.postpage-content{
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   text-align: left;
 }
 
-.newpost-time{
+.postpage-youtube{
+  width: 40px;
+  vertical-align: bottom;
+}
+
+.postpage-blog{
+  width: 40px;
+  height: 40px;
+  vertical-align: bottom;
+}
+
+.postpage-time{
   font-size: 1.5rem;
   margin-bottom: 60px;
 }
@@ -598,7 +627,7 @@ footer{
   margin-top: 40px;
   font-size: 1.5rem;
   font-weight: 600;
-} 
+}
 
 
 
@@ -848,29 +877,39 @@ footer{
 
 
 
-  /* newpost page */
-  .newpost{
-    width: 400px;
+  /* post page */
+  .postpage-top{
+    width: 80%;
   }
 
-  .newpost-head{
-    margin-top: 122.88px;
+  .postpage{
+    width: 614.39px;
+    margin-bottom: 80px;
   }
 
-  .newpost-title{
-    margin-bottom: 38.4px;
+  .postpage-title{
+    margin-bottom: 50px;
   }
 
-  .newpost-content{
-    margin: 38.4px auto;
+  .postpage-content{
+    margin: 50px auto 100px;
   }
 
-  .newpost-time{
-    margin-bottom: 38.4px;
+  .postpage-youtube{
+    width: 50px;
+  }
+
+  .postpage-blog{
+    width: 50px;
+    height: 50px;
+  }
+
+  .postpage-time{
+    margin-bottom: 50px;
   }
 
 
-
+  
   /* form page */
   .form-top{
     margin-top: 95px;
