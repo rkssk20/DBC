@@ -63,11 +63,11 @@ $disp_data = array_slice($posts, $start_no, MAX, true);
 echo '<div class="postpage-pagination">';
 
   if($now > 1){
-    echo '<a class="postpage-button" href="pagination.php?page_id='.($now - 1).'"><</a>'. ' ';
+    echo '<a class="postpage-button" href="post_page.php?page_id='.($now - 1).'"><</a>'. ' ';
   }
 
   if($now > 2){
-    echo '<a class="postpage-button" href="pagination.php?page_id=1">1</a>'. ' ';
+    echo '<a class="postpage-button" href="post_page.php?page_id=1">1</a>'. ' ';
   }
 
   if($now > 3){
@@ -82,7 +82,7 @@ echo '<div class="postpage-pagination">';
     }else if($i == $now){
       echo '<a class="postpage-now postpage-button">'. $now .'</a>';
     }else{
-      echo '<a class="postpage-button" href="pagination.php?page_id='. $i. '">'. $i. '</a>'. ' ';
+      echo '<a class="postpage-button" href="post_page.php?page_id='. $i. '">'. $i. '</a>'. ' ';
     }
   }
 
@@ -91,11 +91,11 @@ echo '<div class="postpage-pagination">';
   }
 
   if($now < $max_page - 1){
-    echo '<a class="postpage-button" href="pagination.php?page_id='. $max_page.'">'. $max_page. '</a>'. ' ';
+    echo '<a class="postpage-button" href="post_page.php?page_id='. $max_page.'">'. $max_page. '</a>'. ' ';
   }
 
   if($now < $max_page){
-    echo '<a class="postpage-button" href="pagination.php?page_id='.($now + 1).'">></a>'. ' ';
+    echo '<a class="postpage-button" href="post_page.php?page_id='.($now + 1).'">></a>'. ' ';
   }
 
 echo '</div>';
