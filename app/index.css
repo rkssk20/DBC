@@ -469,7 +469,7 @@ footer{
 /* post page */
 .postpage-top{
   width: 80%;
-  margin: 135px auto 0;
+  margin: 55px auto 0;
   align-items: center;
 }
 
@@ -483,13 +483,6 @@ footer{
 
 .postpage:first-child{
   border-top: hidden;
-}
-
-.postpage-new{
-  color:var(--dbc-green);
-  font-size: 1.7rem;
-  margin: 0;
-  text-align: left;
 }
 
 .postpage:not(:first-child)>.postpage-new{
@@ -520,7 +513,54 @@ footer{
 
 .postpage-time{
   font-size: 1.5rem;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+
+.postpage-pagination{
+  margin: 0 auto 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.postpage-pagination > a:first-of-type:nth-last-child(5),
+.postpage-pagination > a:first-of-type:nth-last-child(5) ~ a{
+  margin: 15px;
+}
+
+.postpage-pagination > a:first-of-type:nth-last-child(7),
+.postpage-pagination > a:first-of-type:nth-last-child(7) ~ a{
+  margin: 8px;
+}
+
+.postpage-pagination > a:first-of-type:nth-last-child(8),
+.postpage-pagination > a:first-of-type:nth-last-child(8) ~ a{
+  margin: 5px;
+}
+
+.postpage-pagination > a:first-of-type:nth-last-child(9),
+.postpage-pagination > a:first-of-type:nth-last-child(9) ~ a{
+  margin: 3px;
+}
+
+.postpage-button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+}
+
+.postpage-button:hover{
+  background-color: #aaaaaa;
+}
+
+.postpage-pagination > .postpage-now{
+  background-color: #aaaaaa;
 }
 
 
@@ -880,6 +920,7 @@ footer{
   /* post page */
   .postpage-top{
     width: 80%;
+    margin-top: 95px;
   }
 
   .postpage{
@@ -907,9 +948,35 @@ footer{
   .postpage-time{
     margin-bottom: 50px;
   }
-
-
   
+  .postpage-pagination > a:first-of-type:nth-last-child(5),
+  .postpage-pagination > a:first-of-type:nth-last-child(5) ~ a{
+    margin: 25px;
+  }
+  
+  .postpage-pagination > a:first-of-type:nth-last-child(7),
+  .postpage-pagination > a:first-of-type:nth-last-child(7) ~ a{
+    margin: 20px;
+  }
+  
+  .postpage-pagination > a:first-of-type:nth-last-child(8),
+  .postpage-pagination > a:first-of-type:nth-last-child(8) ~ a{
+    margin: 15px;
+  }
+  
+  .postpage-pagination > a:first-of-type:nth-last-child(9),
+  .postpage-pagination > a:first-of-type:nth-last-child(9) ~ a{
+    margin: 13px;
+  }
+  
+  .postpage-button{
+    width: 35px;
+    height: 35px;
+    line-height: 33px;
+  }
+
+
+
   /* form page */
   .form-top{
     margin-top: 95px;
