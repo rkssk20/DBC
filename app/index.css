@@ -129,14 +129,8 @@ header{
 
 /* YouTube */
 .movie-wrapper{
-  width: 768px;
-  max-width: 100%;
-  margin: 55px auto 0;
-  height: calc(100vh - 55px);
-  background-size: auto 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 80px;
 }
 
 .movie{
