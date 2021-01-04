@@ -2,6 +2,7 @@
 
 session_start();
 header ("Content-type: text/html; charset=utf-8");
+// クリックジャッキング(不正なリンク)を載せないように
 header ('X-FRAME-OPTIONS: SAMEORIGIN');
 
 require 'php/gallery.php';
@@ -55,11 +56,11 @@ include 'php/header.php';
 
           <!-- URLなし=サイト内、あり=リンク -->
           <?php if($post['url'] == null): ?>
-          <a href="php/post_page.php" class="swiper-link">
+          <a href="php/post_page.php" class="swiper-link post-title">
           <?php else: ?>
-          <a href="<?php echo $post['url'] ?>" target="_blank" class="swiper-link">
+          <a href="<?php echo $post['url'] ?>" target="_blank" class="swiper-link post-title">
           <?php endif; ?>
-          <h1 class="post-title"><?php echo $post['title'] ?></h1>
+          <?php echo $post['title'] ?>
           </a>
 
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
@@ -235,7 +236,7 @@ include 'php/header.php';
   <div class="link-box">
     <h1 class="link-title">お問い合わせ</h1>
     <div class="link-content">
-      <p class="link-text">部活へのご質問や、撮影・司会協力等のご依頼は<br>メール（dbc2020.hp@gmail.com）<br>またはTwitterのダイレクトメールからお願いします。</p>
+      <p class="link-contact">部活へのご質問や、撮影・司会協力等のご依頼は<br>メール（dbc2020.hp@gmail.com）<br>またはTwitterのダイレクトメールからお願いします。</p>
     </div>
     <a class="twitter-timeline" data-chrome=”noheader,nofooter” data-theme="light" href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw">Tweets by dokkyobc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>

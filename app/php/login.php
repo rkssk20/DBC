@@ -9,19 +9,14 @@ if (isset($_POST['submit'])) {
   $pass = $_POST['pass'];
 
   try {
-    // select countでレコード数を取得
     $stmt = $pdo->prepare('SELECT * FROM users WHERE user = :user');
-    // execuseで実行
     $stmt->execute(array(':user' => $_POST['user']));
-    // fetchで結果を配列で取得
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
-    $stmt = null;
-    $pdo = null;
+    unset($pdo, $stmt);
 
-    $errorMessage = $result;
-
+    // password_verifyで1つ目の引数のパスワードが2つ目の引数のhashのパスワードと一致するか調べる
     if(password_verify($_POST['pass'], $result['password'])){
-      include('form.php');
+      header('Location:form_page.php');
     }else{
       $errorMessage = "ログイン認証に失敗しました";
     } 

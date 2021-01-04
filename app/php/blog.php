@@ -2,6 +2,7 @@
   
   require 'db.php' ;
 
-  $st = $pdo->query("SELECT * FROM post ORDER BY no DESC");
+  // timeをDESCで降順
+  $st = $pdo->query("SELECT * FROM post ORDER BY time DESC");
   $posts = $st->fetchAll();
 ?>

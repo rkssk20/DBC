@@ -4,9 +4,10 @@ require 'db.php';
 
 try{
 
-$stmt = $pdo->prepare("INSERT INTO users (user, password) VALUES (:user, :password)");
+    $stmt = $pdo->prepare("INSERT INTO users (user, password) VALUES (:user, :password)");
 
-$stmt->execute(array(':user' => $_POST['user'],':password' => password_hash($_POST['pass'], PASSWORD_DEFAULT)));
+    // 配列を使い、userにはPOSTされたuser、passwordにはhash化する関数を使う
+    $stmt->execute(array(':user' => $_POST['user'],':password' => password_hash($_POST['pass'], PASSWORD_DEFAULT)));
 
 }catch(Exception $e){
     echo "データベースの接続に失敗しました：";

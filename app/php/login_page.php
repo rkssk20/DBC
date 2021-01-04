@@ -18,6 +18,7 @@ include 'header.php';
     <font color="#ff0000">
       <?php
 
+      // errormessageをhtmlspecialcharsのENT_QUOTES(クオーテーションを変換)に設定し表示
       echo htmlspecialchars($errorMessage, ENT_QUOTES);
 
       ?>
