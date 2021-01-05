@@ -12,7 +12,9 @@
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
-          clickable: true
+          clickable: true,
+          dynamicBullets: true,
+          dynamicMainBullets:5
         }
       });
     }else if(window.matchMedia('(min-width: 768px)').matches){

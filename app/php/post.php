@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
   if (mb_strlen($content) > 300) $error .= 'タイトルは300文字以内で記入してください<br>';
 
   if(!$error){
-    $st = $pdo->query("INSERT INTO post(title,content) VALUES('$title','$content')");
+    $st = $pdo->query("INSERT INTO post(title,content,time) VALUES('$title','$content',now())");
 
     unset($pdo);
 
