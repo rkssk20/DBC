@@ -7,8 +7,8 @@
 <ul>
   <li>スクレイピング(Puppeteer, YouTube Data API)</li>
   <p>
-    AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、
-    部活のYouTube, ブログが更新された際に自動で当サイトに掲載します。
+    AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>
+    部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。
   </p>
   
   <li>ページネーション</li>
