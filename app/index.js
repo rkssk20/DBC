@@ -65,7 +65,6 @@
   }
 
   function return_scroll(){
-  // removeEventListenerでaddeventlisternerを削除
     document.removeEventListener("mousewheel", scroll_control, { passive: false });
     document.removeEventListener('touchmove', scroll_control, { passive: false });
   }

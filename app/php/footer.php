@@ -4,7 +4,7 @@
       </footer>
     </div>
     <script src="<?php echo $path; ?>index.js"></script>
-    <!-- swiper -->
+    <!-- swiper  -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="swiper.js"></script>

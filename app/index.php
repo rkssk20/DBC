@@ -2,7 +2,6 @@
 
 session_start();
 header ("Content-type: text/html; charset=utf-8");
-// クリックジャッキング(不正なリンク)を載せないように
 header ('X-FRAME-OPTIONS: SAMEORIGIN');
 
 require 'php/gallery.php';

@@ -5,7 +5,7 @@ try {
       // ローカル開発環境
       $pdo = new PDO('mysql:host=mysql_dbc; dbname=dbc','root','password');
     }else{
-      // AWS本番環境
+      // AWS本番環境 
       $HOST = getenv('DATABASE_HOST');
       $NAME = getenv('DATABASE_NAME');
       $USER = getenv('DATABASE_USER');

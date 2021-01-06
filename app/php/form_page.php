@@ -42,7 +42,6 @@ include 'header.php';
 
 <?php for($i = 0; $i < count($posts); $i++): ?>
   <p class="form-head"><?php echo $posts[$i]['title']; ?></p>
-  <!-- javascript:void(0)でhrefのリンクを無効化。onclick(クリック時の動作)でokと表示するconfirm(確認ダイアログ)を出し、okの場合そのidのdelete_post.phpへ -->
   <a  class="form-head form-delete" href="javascript:void(0)" onclick="var ok = confirm('削除しますか？'); if (ok) location.href='delete_post.php?id=<?= $posts[$i]['no']; ?>'">削除</a>
 <?php endfor; ?>
 
