@@ -428,7 +428,7 @@ iframe{
 
 
 /* 管理者ログイン */
-.title-login{
+#title-login{
   margin-bottom: 20px;
 }
 
@@ -960,7 +960,7 @@ footer{
   
   
   /* 管理者ログイン */
-  .title-login{
+  #title-login{
     margin-bottom: 40px;
   }
   
