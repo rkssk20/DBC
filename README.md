@@ -1,7 +1,7 @@
-<h1>獨協大学放送研究会サイト</h1>
+<h1>獨協大学放送研究会ウェブサイト</h1>
 
-<p>
-  https://dokkyobc.tk<br>
+  <a target="_blank">https://dokkyobc.tk<br></a>
+ <p>
   所属していた部活動のウェブサイトです。
 </p>
 
