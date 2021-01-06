@@ -10,13 +10,12 @@
 <ul>
   <li>スクレイピング(Puppeteer, YouTube Data API)</li>
   <p>
-    <br>
     AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>
-    部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。<br>
+    部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。
   </p>
-  <li>ページネーション</li><br>
-  <li>記事投稿、削除</li><br>
-  <li>画像投稿</li><br>
+  <li>ページネーション</li>
+  <li>記事投稿、削除</li>
+  <li>画像投稿</li>
   <li>ログイン、ログアウト(セッション)</li>
   <p>
     ユーザー名:<br>
@@ -46,5 +45,7 @@
   <li>AWS EC2</li>
   <li>AWS RDS</li>
   <li>AWS Lambda</li>
-  
+  <li>Route53</li>
+  <li>ロードバランサー</li>
+  <li>CircleCI</li>
 </ul>
