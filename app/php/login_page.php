@@ -18,7 +18,6 @@ include 'header.php';
     <p class="logout-error">
       <?php
 
-      // errormessageをhtmlspecialcharsのENT_QUOTES(クオーテーションを変換)に設定し表示
       echo htmlspecialchars($errorMessage, ENT_QUOTES);
 
       ?>

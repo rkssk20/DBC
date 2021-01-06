@@ -242,7 +242,7 @@ include 'php/header.php';
   </div>
 </div>
 
-<a href="php/login_page.php" id="title-login"><button>管理者ログイン</button></a>
+<a href="php/login_page.php" class="title-login"><button>管理者ログイン</button></a>
 
 
 

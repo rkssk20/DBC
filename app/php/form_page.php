@@ -1,13 +1,13 @@
 <?php
 
-require 'gallery.php';
-require 'blog.php';
-
 session_start();
 if(!isset($_SESSION['USER'])){
   header("Location:logout_page.php");
   exit;
 }
+
+require 'gallery.php';
+require 'blog.php';
 
 $path = "../";
 include 'header.php';
@@ -68,6 +68,10 @@ include 'header.php';
     </li>
   <?php endfor; ?>
 </ul>
+
+
+
+<a href="logout_page.php" class="form-login"><button>ログアウト</button></a>
 
 
 

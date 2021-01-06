@@ -1,13 +1,10 @@
 @charset "utf-8";
 
 html{
-  /* htmlタグに基準のfont-sizeを設定することで、remを使用できる。
-  (このとき1rem = 10px)。なお、emや%は親要素に影響を受けてしまう。 */
   font-size: 10px;
   font-family: HGP創英角ﾎﾟｯﾌﾟ体,sans-serif;
   text-align: center;
   background-color: #eeeeee;
-  /* --から始まるカスタムプロパティ。以降、var()で使用できる。 */
   --dbc-black: hsla(220, 13%, 18%,1);
   --dbc-yellow: hsla(60, 50%, 50%,1);
   --dbc-green:hsla(83, 62%, 45%,1);
@@ -15,11 +12,9 @@ html{
 }
 
 body{
-  /* ページ上部の空白を消す */
   margin: 0;
 }
 
-/* 画面の基本的な幅を設定 */
 .wrap{
   display: flex;
   flex-direction: column;
@@ -168,7 +163,6 @@ iframe{
 }
 
 .swiper-button-prev:after,.swiper-button-next:after{
-  /* !importantでswiperの設定を上書きする */
   font-size: 25px !important;
   color: black;
 }
@@ -189,7 +183,6 @@ iframe{
   text-align: left;
 }
 
-/* 最初の子要素でなければ */
 .post:not(:first-child)>.post-new{
   visibility:hidden;
 }
@@ -206,10 +199,8 @@ iframe{
 .post-content{
   font-size: 1.5rem;
   height: 70px !important;
-  /* はみ出るときに改行 */
   word-wrap: break-word;
   overflow: hidden;
-  /* 行の中央を基準に */
   vertical-align: middle;
 }
 
@@ -236,7 +227,7 @@ iframe{
 
 
 
-/* 獨協大学放送研究会について */
+/* DBCについて */
 #title-intro{
   font-size: 1.7rem;
   border-width:3px;
@@ -255,7 +246,6 @@ iframe{
 
 .swiper-row{
   display: flex;
-  /* スマホデザインでは画像が上、PCでは右になるので逆から描画 */
   flex-direction: column-reverse;
   align-items: center;
 }
@@ -294,7 +284,6 @@ iframe{
   bottom:0;
 	width:100%;
   text-align: center;
-  /* linear-gradientでグラデーション */
   background: rgba(0, 0, 0, 0) linear-gradient(180deg, rgba(255, 255, 255, 0.5), white) repeat scroll 0 0;
   font-weight:bold;
 	cursor:pointer;
@@ -439,7 +428,7 @@ iframe{
 
 
 /* 管理者ログイン */
-#title-login{
+.title-login{
   margin-bottom: 20px;
 }
 
@@ -461,7 +450,6 @@ footer{
 .title-bw{
   width: 100px;
   vertical-align: bottom;
-  /* 彩度で白黒 */
   filter: saturate(0%);
 }
 
@@ -536,7 +524,6 @@ footer{
   font-size: 1.7rem;
 }
 
-/* 指定した子要素の数のときにスタイリング */
 .postpage-pagination > a:first-of-type:nth-last-child(3),
 .postpage-pagination > a:first-of-type:nth-last-child(3) ~ a{
   margin: 30px;
@@ -658,6 +645,11 @@ footer{
 
 .form-text:first-child{
   margin-right: 10px;
+}
+
+.form-login{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -831,7 +823,7 @@ footer{
 
 
 
-  /* 獨協大学放送研究会について */
+  /* DBCについて */
   #title-intro{
     margin-top: -115.2px;
     margin-bottom: 38.4px;
@@ -968,7 +960,7 @@ footer{
   
   
   /* 管理者ログイン */
-  #title-login{
+  .title-login{
     margin-bottom: 40px;
   }
   
@@ -1084,6 +1076,11 @@ footer{
 
   .form-keep{
     margin-top: 38.4px;
+  }
+
+  .form-login{
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 
 

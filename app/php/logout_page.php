@@ -1,22 +1,18 @@
 <?php
 
+session_start();
+
 $path = "../";
 include 'header.php';
 
-// session_start();
-
-// 元々セッションのあった人にはログアウトのメッセージ
-// そうでない(セッションが切れている)人にはタイムアウトのメッセージ
 if(isset($_SESSION['USER'])){
   $errorMessage = 'ログアウトしました';
 }else{
   $errorMessage = 'セッションがタイムアウトしました';
 }
 
-// セッションの変数のクリア
 $_SESSION = array();
 
-// セッションのクリア
 @session_destroy();
 ?>
 
