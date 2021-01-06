@@ -15,14 +15,14 @@ include 'header.php';
   <form class="login" id="form" action="" method="POST">
     <h1 class="login-title">管理者ログイン</h1>
 
-    <font color="#ff0000">
+    <p class="logout-error">
       <?php
 
       // errormessageをhtmlspecialcharsのENT_QUOTES(クオーテーションを変換)に設定し表示
       echo htmlspecialchars($errorMessage, ENT_QUOTES);
 
       ?>
-    </font>
+    </p>
 
     <div class="login-content">
       <label class="login-head" for="signup-id">ユーザー名</label>

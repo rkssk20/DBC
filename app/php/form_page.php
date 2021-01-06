@@ -3,8 +3,15 @@
 require 'gallery.php';
 require 'blog.php';
 
+session_start();
+if(!isset($_SESSION['USER'])){
+  header("Location:logout_page.php");
+  exit;
+}
+
 $path = "../";
 include 'header.php';
+
 
 ?>
 

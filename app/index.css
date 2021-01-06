@@ -662,7 +662,7 @@ footer{
 
 
 
-/* member page */
+/* login page */
 .login-wrapper{
   height: calc(100vh - 55px - 50px);
   margin-top: 55px;
@@ -704,6 +704,35 @@ footer{
   margin-top: 40px;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+
+
+/* logout page */
+.logout{
+  height: calc(100vh - 55px - 70px);
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-title{
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.logout-error{
+  color: #ff0000;
+  font-size: 1.5rem;
+  margin-top: 50px;
+}
+
+.logout-text{
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: black;
 }
 
 
@@ -1084,5 +1113,21 @@ footer{
     width: 100px;
     font-weight: 400;
     margin-top: 40px;
-  }  
+  }
+
+
+
+  /* logout page */
+  .logout{
+    height: calc(100vh - 95px - 70px);
+    margin-top: 95px;
+  }
+
+  .logout-error{
+    margin-top: 50px;
+  }
+
+  .logout-text{
+    margin-top: 50px;
+  }
 }
