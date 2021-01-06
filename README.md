@@ -12,11 +12,11 @@
   <p>
     <br>
     AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>
-    部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。
+    部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。<br>
   </p>
-  <li>ページネーション</li>
-  <li>記事投稿、削除</li>
-  <li>画像投稿</li>
+  <li>ページネーション</li><br>
+  <li>記事投稿、削除</li><br>
+  <li>画像投稿</li><br>
   <li>ログイン、ログアウト(セッション)</li>
   <p>
     ユーザー名:<br>
@@ -26,6 +26,7 @@
 
 <h2>使用技術</h2>
 
+<h3>言語</h3>
 <ul>
   <li>HTML/CSS</li>
   <li>JavaScript</li>
