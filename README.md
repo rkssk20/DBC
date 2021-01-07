@@ -45,7 +45,7 @@
 
 
 <h3>本番環境</h3>
-<img width="1109" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103925146-706c8a00-515a-11eb-9ea9-cec2f48188f5.png">
+<img width="500" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103925146-706c8a00-515a-11eb-9ea9-cec2f48188f5.png">
 <ul>
   <li>AWS (ECS, EC2, RDS, Lambda, ALB, Route53, Certificate Manager)</li>
   <li>CircleCI(自動デプロイのみ)</li>
