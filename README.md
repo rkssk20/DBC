@@ -48,5 +48,7 @@
 <img width="700" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103926433-41efae80-515c-11eb-9447-521a91bce748.png">
 <ul>
   <li>AWS (ECS, EC2, RDS, Lambda, ALB, Route53, Certificate Manager)</li>
+  <p></p>
   <li>CircleCI(自動デプロイのみ)</li>
+  <p>GitHubへのpushをCircleCIが検知し、<br>AWSに自動でデプロイ。</p>
 </ul>
