@@ -45,6 +45,7 @@
 
 
 <h3>本番環境</h3>
+![draw](https://user-images.githubusercontent.com/67939683/103924414-50889680-5159-11eb-806a-7c9fe696e18d.png)
 <ul>
   <li>AWS (ECS, EC2, RDS, Lambda, ALB, Route53, Certificate Manager)</li>
   <li>CircleCI(自動デプロイのみ)</li>
