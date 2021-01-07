@@ -30,19 +30,23 @@
   <li>MySQL</li>
 </ul>
 
+<h3>外部API, ライブラリなど</h3>
+<ul>
+  <li>YouTube Data API</li>
+  <li>Puppeteer</li>
+  <li>swiper</li>
+</ul>
+
 
 <h3>開発環境</h3>
 <ul>
-  <li>Docker</li>
+  <li>Docker, docker-compose</li>
 </ul>
 
 
 <h3>本番環境</h3>
 <ul>
-  <li>AWS EC2</li>
-  <li>AWS RDS</li>
-  <li>AWS Lambda</li>
-  <li>Route53</li>
+  <li>AWS (EC2, RDS, Lambda, Route53, )</li>
   <li>ロードバランサー</li>
   <li>CircleCI</li>
 </ul>
