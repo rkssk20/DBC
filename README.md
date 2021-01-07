@@ -33,8 +33,8 @@
 <h3>外部API, ライブラリなど</h3>
 <ul>
   <li>YouTube Data API</li>
-  <li>Puppeteer</li>
-  <li>swiper</li>
+  <li>Puppeteer(Node.js)</li>
+  <li>swiper(JavaScript)</li>
 </ul>
 
 
