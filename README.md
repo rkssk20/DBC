@@ -9,6 +9,7 @@
 
 <ul>
   <li>スクレイピング(Puppeteer, YouTube Data API)</li>
+  <img width="1109" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103884245-a2adc580-5121-11eb-9b44-3bf01fe3ac73.png">
   <p>
     AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>
     部活のYouTube, ブログが更新された際、自動で当サイトに掲載します。
