@@ -46,6 +46,6 @@
 
 <h3>本番環境</h3>
 <ul>
-  <li>AWS (ECS, EC2, RDS, Lambda, Route53, ALB)</li>
+  <li>AWS (ECS, EC2, RDS, Lambda, ALB, Route53, Certificate Manager)</li>
   <li>CircleCI(自動デプロイのみ)</li>
 </ul>
