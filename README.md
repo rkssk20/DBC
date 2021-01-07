@@ -45,7 +45,7 @@
 
 
 <h3>本番環境</h3>
-<img width="700" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103926433-41efae80-515c-11eb-9447-521a91bce748.png">
+<img width="700" alt="dbc_scraping" src="https://user-images.githubusercontent.com/67939683/103927605-f3dbaa80-515d-11eb-9609-7a5fe75421fb.png">
 <ul>
   <li>AWS (ECS, EC2, RDS, Lambda, ALB, Route53, Certificate Manager)</li>
   <p></p>
