@@ -1,35 +1,22 @@
 version: '3.7'
 
 services:
-  mysql:
+  db:
     image: mysql:5.7
-    container_name: mysql_dbc
     volumes:
       - db_data:/var/lib/mysql
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: 'password'
-
-  phpmyadmin:
-    depends_on:
-      - mysql
-    image: phpmyadmin/phpmyadmin
-    environment:
-      PMA_HOST: mysql
-    restart: always
-    ports:
-      - "8030:80"
+    hostname: $MYSQL_HOST
 
   php-apache:
     build: .
+    # .envから環境変数を取得
+    env_file: .env
     volumes:
       - ./app:/var/www/html
     restart: always
     ports:
       - "30:80"
-    depends_on:
-      - mysql
 
 volumes:
-    db_data: {}
-    
+  db_data:
