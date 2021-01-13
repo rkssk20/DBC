@@ -17,3 +17,4 @@ workflows:
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
           container-image-name-updates: 'container=dbc,tag=${CIRCLE_SHA1}'
+          
