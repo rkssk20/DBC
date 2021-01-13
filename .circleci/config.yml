@@ -5,18 +5,18 @@ orbs:
 workflows:
   build-and-deploy:
     jobs:
-      - aws-ecr/build_and_push_image:
+      - name: dbc_mysql
+          aws-ecr/build_and_push_image:
           account-url: 'AWS_ECR_ACCOUNT_URL'
           repo: 'dbc'
           region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
-          name: dbc_mysql
-      - aws-ecr/build_and_push_image:
+      - name: dbc_php-apache
+          aws-ecr/build_and_push_image:
           account-url: 'AWS_ECR_ACCOUNT_URL2'
           repo: 'dbc'
           region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
-          name: dbc_php-apache
       - aws-ecs/deploy-service-update:
           requires:
             - dbc_mysql
