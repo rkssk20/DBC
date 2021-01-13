@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-aws-ecr: circleci/aws-ecr@6.1.0
+aws-ecr: circleci/aws-ecr@0.0.10
 aws-ecs: circleci/aws-ecs@0.0.8
 workflows:
 build_and_push_image:
@@ -17,4 +17,4 @@ requires:
 family: 'dbc-task'
 cluster-name: 'dbc-cluster'
 service-name: 'dbc'
-container-image-name-updates: 'container=dbc_mysql,tag=${CIRCLE_SHA1}'
+container-image-name-updates: 'container=dbc_,tag=${CIRCLE_SHA1}'
