@@ -20,9 +20,14 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - dbc_mysql
-            - dbc_php-apache
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
           container-image-name-updates: 'container=dbc_mysql,tag=${CIRCLE_SHA1}'
+      - aws-ecs/deploy-service-update:
+          requires:
+            - dbc_php-apache
+          family: 'dbc-task'
+          cluster-name: 'dbc-cluster'
+          service-name: 'dbc'
           container-image-name-updates: 'container=dbc_php-apache,tag=${CIRCLE_SHA1}'
