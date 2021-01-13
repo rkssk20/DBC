@@ -10,6 +10,13 @@ workflows:
           repo: 'dbc_mysql'
           region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build_and_push_image
+          family: 'dbc-task'
+          cluster-name: 'dbc-cluster'
+          service-name: 'dbc'
+          container-image-name-updates: 'container=appp,tag=${CIRCLE_SHA1}'
       - aws-ecr/build_and_push_image:
           account-url: 'AWS_ECR_ACCOUNT_URL2'
           repo: 'dbc_php-apache'
