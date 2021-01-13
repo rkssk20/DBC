@@ -19,7 +19,6 @@ workflows:
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
           requires:
-          requires:
             - dbc_mysql
             - dbc_php-apache
           family: 'dbc-task'
