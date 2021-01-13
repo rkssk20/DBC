@@ -11,16 +11,16 @@ workflows:
           repo: 'dbc_mysql'
           region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
-      - aws-ecr/build_and_push_image:
-          name: dbc_php-apache
-          account-url: 'AWS_ECR_ACCOUNT_URL'
-          repo: 'dbc_php-apache'
-          region: 'AWS_REGION'
-          tag: "${CIRCLE_SHA1}"
+      # - aws-ecr/build_and_push_image:
+      #     name: dbc_php-apache
+      #     account-url: 'AWS_ECR_ACCOUNT_URL'
+      #     repo: 'dbc_php-apache'
+      #     region: 'AWS_REGION'
+      #     tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
           requires:
-            - dbc_mysql
-            - dbc_php-apache
+            - aws-ecr/build-and-push-image
+            # - dbc_php-apache
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
