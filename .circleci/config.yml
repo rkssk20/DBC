@@ -24,4 +24,4 @@ workflows:
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
-          container-image-name-updates: 'container=appp,tag=${CIRCLE_SHA1}'
+          container-image-name-updates: 'container=dbc,tag=${CIRCLE_SHA1}'
