@@ -25,3 +25,4 @@ workflows:
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
           container-image-name-updates: 'container=dbc_mysql,tag=${CIRCLE_SHA1}'
+          container-image-name-updates: 'container=dbc_php-apache,tag=${CIRCLE_SHA1}'
