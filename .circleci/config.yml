@@ -1,20 +1,52 @@
+# version: 2.1
+# orbs:
+#   aws-ecr: circleci/aws-ecr@0.0.10
+#   aws-ecs: circleci/aws-ecs@0.0.8
+# workflows:
+#   build-and-deploy:
+#     jobs:
+#       - aws-ecr/build_and_push_image:
+#           name: dbc_mysql
+#           account-url: 'AWS_ECR_ACCOUNT_URL'
+#           repo: 'dbc_mysql'
+#           region: 'AWS_REGION'
+#           tag: "${CIRCLE_SHA1}"
+#       # - aws-ecr/build_and_push_image:
+#       #     name: dbc_php-apache
+#       #     account-url: 'AWS_ECR_ACCOUNT_URL'
+#       #     repo: 'dbc_php-apache'
+#       #     region: 'AWS_REGION'
+#       #     tag: "${CIRCLE_SHA1}"
+#       - aws-ecs/deploy-service-update:
+#           requires:
+#             - aws-ecr/build_and_push_image
+#             - aws-ecr/build-and-push-image
+#             # - dbc_php-apache
+#           family: 'dbc-task'
+#           cluster-name: 'dbc-cluster'
+#           service-name: 'dbc'
+#           container-image-name-updates: 'container=dbc_mysql,tag=${CIRCLE_SHA1}'
+#           container-image-name-updates: 'container=dbc_php-apache,tag=${CIRCLE_SHA1}'
+
+
+
 version: 2.1
 orbs:
-aws-ecr: circleci/aws-ecr@0.0.10
-aws-ecs: circleci/aws-ecs@0.0.8
+  aws-ecr: circleci/aws-ecr@6.1.0
+  aws-ecs: circleci/aws-ecs@0.0.8
 workflows:
-build_and_push_image:
-jobs:
-- aws-ecr/build-and-push-image:
-name: dbc_mysql
-region: AWS_REGION
-account-url: AWS_ECR_ACCOUNT_URL
-repo: 'dbc_mysql'
-tag: "${CIRCLE_SHA1}"
-- aws-ecs/deploy-service-update:
-requires:
-- dbc_mysql
-family: 'dbc-task'
-cluster-name: 'dbc-cluster'
-service-name: 'dbc'
-container-image-name-updates: 'container=dbc_,tag=${CIRCLE_SHA1}'
+  build_and_push_image:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          name: dbc_mysql
+          region: AWS_REGION
+          account-url: AWS_ECR_ACCOUNT_URL
+          repo: 'dbc_mysql'
+          tag: "${CIRCLE_SHA1}"
+      - aws-ecs/deploy-service-update:
+          requires:
+      - dbc_mysql
+          family: 'dbc-task'
+          cluster-name: 'dbc-cluster'
+          service-name: 'dbc'
+          container-image-name-updates: 'container=dbc_mysql,tag=${CIRCLE_SHA1}'
