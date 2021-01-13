@@ -45,7 +45,7 @@ workflows:
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
           requires:
-      - dbc_mysql
+            - dbc_mysql
           family: 'dbc-task'
           cluster-name: 'dbc-cluster'
           service-name: 'dbc'
