@@ -7,7 +7,7 @@ workflows:
     jobs:
       - aws-ecr/build_and_push_image:
           account-url: 'AWS_ECR_ACCOUNT_URL'
-          repo: 'dbc'
+          repo: 'dbc_mysql'
           region: 'AWS_REGION'
           tag: "${CIRCLE_SHA1}"
       - aws-ecs/deploy-service-update:
