@@ -20,7 +20,7 @@ include 'php/header.php';
     <li><a class="menu-text" id="link2" href="#title-intro">DBCについて</a></li>
     <li><a class="menu-text" id="link3" href="#title-collabo">活動報告</a></li>
     <li><a class="menu-text" id="link5" href="#title-gallery">ギャラリー</a></li>
-    <li><a class="menu-text" id="link4" href="#title-link">リンク</a></li>
+    <li><a class="menu-text" id="link4" href="#title-link">お問い合わせ</a></li>
     <div class="menu-sns">
       <a target="_blank" href="https://twitter.com/dokkyobc"><img class="menu-icon" src="public/Twitter_Logo_WhiteOnImage.png" alt="Twitter icon"></a>
       <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="menu-icon" src="public/youtube_social_squircle_dark.png" alt="YouTube icon"></a>
@@ -37,7 +37,7 @@ include 'php/header.php';
 <!-- youtube -->
 <div class="movie-wrapper">
   <div class="movie">
-    <iframe src="https://www.youtube.com/embed/DQBlIPz9EMc?autoplay=1&mute=1&rel=0&loop=1&playlist=DQBlIPz9EMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="movie-iframe" src="https://www.youtube.com/embed/DQBlIPz9EMc?autoplay=1&mute=1&rel=0&loop=1&playlist=DQBlIPz9EMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -46,12 +46,13 @@ include 'php/header.php';
 <!-- 更新情報 -->
 <div>
   <p id="title-new">更新情報</p>
+
   <div class="swiper-container swiper1">
     <div class="swiper-wrapper">
       <!-- blogテーブルから描画 -->
       <?php require 'php/blog.php'; foreach ($posts as $post) { ?>
         <div class="post swiper-slide content-sub">
-          <p class="post-new">New</p>
+          <p class="post-new">New !!</p>
 
           <!-- URLなし=サイト内、あり=リンク -->
           <?php if($post['url'] == null): ?>
@@ -59,7 +60,7 @@ include 'php/header.php';
           <?php else: ?>
           <a href="<?php echo $post['url'] ?>" target="_blank" class="swiper-link post-title">
           <?php endif; ?>
-          <?php echo $post['title'] ?>
+          <?php echo mb_strimwidth($post['title'],0,21,"…") ?>
           </a>
 
           <p class="post-content"><?php echo mb_strimwidth($post['content'],0,80,"…") ?></p>
@@ -79,8 +80,10 @@ include 'php/header.php';
     </div>
     <div class="swiper-button-prev prev1"></div>
     <div class="swiper-button-next next1"></div>
-	<div class="swiper-pagination"></div>
-</div>
+	  <div class="swiper-pagination"></div>
+  </div>
+
+  <a class="post-button" href="php/post_page.php">更新情報一覧へ</a>
 </div>
 
 
@@ -213,36 +216,27 @@ include 'php/header.php';
 
 
 
-<!-- リンク -->
+<!-- お問い合わせ -->
 <div class="contentbox">
-  <p id="title-link">リンク</p>
+  <p id="title-link">お問い合わせ</p>
   <div class="link-box">
-    <h1 class="link-title">YouTube</h1>
+    <a href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @dokkyobc</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <h1 class="link-contact">dbc2020.hp@gmail.com</h1>
     <div class="link-content">
-      <p class="link-text">雄飛祭や部活紹介をまとめた<br>
-      再生リストです。</p>
-      <a target="_blank" href="https://www.youtube.com/playlist?list=PLyiGIE07ww42mJwBTOIkZp7FuGieCOElw"><img class="collabo-icon" src="public/youtube_social_icon_red.png" alt="youtube link"></a>
+      <p class="link-contact">部活への質問、撮影・司会の依頼はメール、<br>Twitterのダイレクトメールからお願いします。</p>
     </div>
   </div>
-  <div class="link-box">
-    <h1 class="link-title">Blog</h1>
-    <div class="link-content">
-      <p class="link-text">発表会の進捗状況などを<br>
-      更新していきます。</p>
-      <a target="_blank" href="https://dokkyobc.blog.fc2.com"><img class="blog-icon" src="public/44433.png" alt="blog icon"></a>
-    </div>
-  </div>
-  <div class="link-box">
-    <h1 class="link-title">お問い合わせ</h1>
-    <div class="link-content">
-      <p class="link-contact">部活へのご質問や、撮影・司会協力等のご依頼は<br>メール（dbc2020.hp@gmail.com）<br>またはTwitterのダイレクトメールからお願いします。</p>
-    </div>
-    <a class="twitter-timeline" data-chrome=”noheader,nofooter” data-theme="light" href="https://twitter.com/dokkyobc?ref_src=twsrc%5Etfw">Tweets by dokkyobc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+  <!-- Google MAP -->
+  <h1 class="link-contact">所在地</h1>
+  <p class="link-contact">〒340-0042 埼玉県草加市学園長1-1<br>学生センター5階 505号室</p>
+  <div class="map">
+    <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.3441023892633!2d139.79523749999998!3d35.8405651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189135c562564b%3A0xcbce49d5d0cfd78a!2z542o5Y2U5aSn5a2mIOWtpueUn-OCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1610873493265!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
 </div>
-
-<a href="php/login_page.php" id="title-login"><button>管理者ログイン</button></a>
-
+    
+    <a href="php/login_page.php" id="title-login"><button>管理者ログイン</button></a>
+    
 
 
 <!-- footer -->

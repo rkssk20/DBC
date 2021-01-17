@@ -2,15 +2,15 @@ const chromium = require('chrome-aws-lambda');
 const mysql = require('mysql');
 
 const DATABASE_HOST = process.env['DATABASE_HOST'];
-const DATABASE_USER = process.env['DATABASE_USER'];
-const DATABASE_PASSWORD = process.env['DATABASE_PASSWORD'];
-const DATABASE_NAME = process.env['DATABASE_NAME'];
+const MYSQL_USER = process.env['MYSQL_USER'];
+const MYSQL_PASSWORD = process.env['MYSQL_PASSWORD'];
+const MYSQL_DATABASE = process.env['MYSQL_DATABASE'];
 
 var connection = mysql.createConnection({
   host: DATABASE_HOST,
-  user: DATABASE_USER,
-  password: DATABASE_PASSWORD,
-  database: DATABASE_NAME
+  user: MYSQL_USER,
+  password: MYSQL_PASSWORD,
+  database: MYSQL_DATABASE
 });
 
 exports.handler = async(event, context) => {
