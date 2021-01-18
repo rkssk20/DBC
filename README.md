@@ -14,7 +14,12 @@ https://dbclub.tk
 
 <h2>使用技術</h2>
 <h3>言語</h3>
-<p>PHP, MySQL</p>
+<ul>
+  <li>PHP</li>
+  <li>JavaScript</li>
+  <li>MySQL</li>
+  (一部node.js使用)
+</ul>
 
 <h3>外部API, ライブラリなど</h3>
 <ul>
@@ -23,3 +28,13 @@ https://dbclub.tk
   <li>swiper</li>
 </ul>
 
+<h3>ローカル開発</h3>
+<ul><li>Docker</li></ul>
+
+<h3>インフラ</h3>
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
