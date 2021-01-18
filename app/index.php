@@ -229,7 +229,7 @@ include 'php/header.php';
   
   <!-- Google MAP -->
   <h1 class="link-contact">所在地</h1>
-  <p class="link-contact">〒340-0042 埼玉県草加市学園長1-1<br>学生センター5階 505号室</p>
+  <p class="link-contact">〒340-0042 埼玉県草加市学園町1-1<br>学生センター5階 505号室</p>
   <div class="map">
     <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.3441023892633!2d139.79523749999998!3d35.8405651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189135c562564b%3A0xcbce49d5d0cfd78a!2z542o5Y2U5aSn5a2mIOWtpueUn-OCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1610873493265!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
