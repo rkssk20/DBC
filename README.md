@@ -33,8 +33,6 @@ https://dbclub.tk
 
 <h3>インフラ</h3>
 <ul>
-  <li>GitHubへのpushをCircleCIが検知し、<br>ECRへDockerイメージのpush, buildとECSのタスク、サービスを更新</li>
-  <li>RDSでMySQLを使用し、EC2から接続</li>
-  <li>Lambdaを定期実行し、RDSに保存</li>
-  <li></li>
+  <li>AWS ECR, ECS, EC2, RDS, Lambda, ALB, Route53, ACM</li>
+  <li>CircleCI(自動デプロイのみ)</li>
 </ul>
