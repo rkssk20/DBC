@@ -4,8 +4,8 @@ https://dbclub.tk
 <h2>機能一覧</h2>
 <ul>
   <li>スクレイピング</li>
-  <img width="500" alt="スクリーンショット 2021-01-19 2 05 36" src="https://user-images.githubusercontent.com/67939683/104945779-8a308b80-59fc-11eb-9309-87c16b876b14.png">
-  <p>AWS LambdaでPuppeteer, YouTube Data APIを使用し、<br>部活のブログ、YouTubeのアップロードを更新情報として当サイトにも掲載します。</p>
+  <img width="700" alt="スクリーンショット 2021-01-19 2 05 36" src="https://user-images.githubusercontent.com/67939683/104945779-8a308b80-59fc-11eb-9309-87c16b876b14.png">
+  <p>AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>部活のブログ、YouTubeのアップロードを当サイトへ更新情報として掲載</p>
   <li>記事投稿、削除</li>
   <li>画像投稿、削除</li>
   <li>ページネーション</li>
@@ -17,8 +17,8 @@ https://dbclub.tk
 <ul>
   <li>PHP</li>
   <li>JavaScript</li>
-  <li>MySQL</li>
   (一部node.js使用)
+  <li>MySQL</li>
 </ul>
 
 <h3>外部API, ライブラリなど</h3>
@@ -33,8 +33,8 @@ https://dbclub.tk
 
 <h3>インフラ</h3>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>GitHubへのpushをCircleCIが検知し、<br>ECRへDockerイメージのpush, buildとECSのタスク、サービスを更新</li>
+  <li>RDSでMySQLを使用し、EC2から接続</li>
+  <li>Lambdaを定期実行し、RDSに保存</li>
   <li></li>
 </ul>
