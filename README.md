@@ -33,7 +33,7 @@ https://dbclub.tk
 
 <h3>インフラ</h3>
 <ul>
-  <img width="700" alt="スクリーンショット 2021-01-19 2 05 36" src="https://user-images.githubusercontent.com/67939683/104991557-5b4d0080-5a62-11eb-879e-38d5b7f8b913.png">
+  <img width="700" alt="スクリーンショット 2021-01-19 2 05 36" src="https://user-images.githubusercontent.com/67939683/104991696-b121a880-5a62-11eb-8854-7bf1c5c785c6.png">
   <li>AWS ECR, ECS, EC2, RDS, Lambda, ALB, Route53, ACM</li>
   <li>CircleCI(自動デプロイのみ)</li>
 </ul>
