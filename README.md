@@ -4,6 +4,7 @@ https://dbclub.tk
 <h2>機能一覧</h2>
 <ul>
   <li>スクレイピング</li>
+  <br>
   <img width="700" alt="スクリーンショット 2021-01-19 2 05 36" src="https://user-images.githubusercontent.com/67939683/104945779-8a308b80-59fc-11eb-9309-87c16b876b14.png">
   <p>AWS LambdaでPuppeteer, YouTube Data APIを定期実行し、<br>部活のブログ、YouTubeのアップロードを当サイトへ更新情報として掲載</p>
   <li>記事投稿、削除</li>
