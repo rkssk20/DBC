@@ -678,6 +678,12 @@ footer{
   align-items: center;
 }
 
+@media screen and (max-height: 415.38px){
+  .login-wrapper{
+    height: 310.38px;
+  }
+}
+
 .login{
   width: 80%;
   border-radius: 5px;
@@ -722,6 +728,12 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-height: 312px){
+  .logout{
+    height: 187px;
+  }
 }
 
 .logout-title{
@@ -802,6 +814,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media screen and (max-height: 527px){
+    .movie-wrapper{
+      height: 432px;
+    }
   }
 
 
@@ -1102,6 +1120,12 @@ footer{
     margin-top: 95px;
   }
 
+  @media screen and (max-height: 503.78px){
+    .login-wrapper{
+      height: 338.38px;
+    }
+  }
+
   .login-error{
     margin-bottom: 40px;
   }
@@ -1130,6 +1154,12 @@ footer{
   .logout{
     height: calc(100vh - 95px - 70px);
     margin-top: 95px;
+  }
+
+  @media screen and (max-height: 360.8px){
+    .logout{
+      height: 195.8px;
+    }
   }
 
   .logout-error{

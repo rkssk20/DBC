@@ -18,8 +18,6 @@ $_SESSION = array();
 
 </header>
 
-<div>
-</div>
 <div class="logout">
   <h3 class="logout-title">ログアウト</h3>
   
